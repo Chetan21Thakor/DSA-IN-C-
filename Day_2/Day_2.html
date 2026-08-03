@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day:2 - Chapter:-2 : Data Type and Variable</title>
+</head>
+<body>
+    <header>
+        <h1>Data Type and Variable</h1>
+    </header>
+    <main>
+        <header>
+            <h2>Boilerplate code</h2>
+        </header>
+        <article>
+            <div class="question">
+            <q>What is Boilerplate code in c++?</q>
+            <p>Ans:Whenever you are doing coding in c++ then some specific line of code you always have to write in c++ to do programming in c++. it's just template code.</p>
+            <h2>This is Boilerplate code of c++.</h2>
+            <code>
+               <pre>
+                #include<iostream>
+                using namespace std ;
+
+                    int main(){
+
+                        cout<<"Hello ,World\n";
+                        return 0;
+                    }
+               </pre>
+            </code>
+            </div>
+        </article>
+        <header>
+            <h2>Execution of C++ File</h2>
+        </header>
+        <article>
+            <div class="question">
+                <q>How does c++ file is executed?</q>
+                <p>Ans: Before to understand a how does c++ file is executed you have to understand a <q>What is Source code?</q> <q>What is Compiler and Compilation? </q> what is Machine code?</p>
+            </div>
+                <br>
+            <div class="question">
+                <p>Source Code Definition:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"A code which is written is high level programming language like c++, java , python, rust by human which is human understandable but computer can not understand it's called "Source code"."</p>
+            </div>
+                <br>
+            <div class="question">
+                <p>Compiler Definition:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"A Compiler is a Software.it's just like a translator which convert a source code into a machine code."</p>
+            </div>
+                <br>
+            <div class="question">
+                <p>Compilation Definition:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"When you are Executing a c++ file then compiler automatically generate a .exe file which called executable file of a c++ source code.During this Process compiler convert a source code into a machine code it's called Compilation Process."</p>
+            </div>
+            <br>
+            <div class="question">
+                <q>How dose c++ file is Executed?</q>
+                <p>Ans:When you are run the c++ source code c++ compiler convert source code into a machine in binary formate in 0 and 1."0" Means a "low"  and 1 means "high". it's automatically generate a .exe file for c++ source code which machine code file which called executable file. This file complete the which you are want to done by machine.</p>
+            </div>
+        </article>
+        <header>
+            <h2>Preprocessor Directive</h2>
+        </header>
+        <article>
+            <div class="question">
+                <q>What is Preprocessor Directive?</q>
+                <p>Ans :We can divide a Preprocessor Directive word into two part Preprocessor and directive. <br>
+                    Directive Definition:Directive is a statement or instruction which tell to compiler to do that task. it's called a Directive just because of it's giving a direction to a compiler. <br>
+                    Preprocessor Definition:"Pre" means first or before and "Processor" Means Process. <br>
+                    Preprocessor Directive Definition :It's telling to compiler to that task before the starting of execution of a code.
+                    <q>Preprocessor Directive are always start from # symbol.</q>
+                </p>
+            </div>
+        </article>
+         <header>
+            <h2>Namespace in C++</h2>
+        </header>
+        <article>
+            <div class="question">
+                <q>What is Namespace?</q>
+                <p>Ans :Before start to understand a Namespace we have to understand a why we need a Namespace?. <br>
+                    Namespace basically solve a name conflict problem. <br> <br>
+                    <q>What is Name Conflict ?</q> <br> <br>
+                    Ans:when we are working with a multiple header file in one single c++ file that time more then two header file has a  function,object,class which are has same name which also available in  another header file with same but do different task then name conflict is occurs  compiler ask "which header file function,object and class i have to use." to solve this name conflict we use a namespace.. <br> <br>
+                    "c++ has stander namespace which name is std." <br> <br>
+                    now we are move forward on our main question is it "What is namespace?"<br>
+                    Ans:"Namespace is just like a registry which just only store a declaration part of the function,function and class which are define inside a header file.Header file is contain actual definition of function,object and class."
+                    <br> <br>
+                    <q>What is Header File?</q><br>
+                    Ans:Pre Written code of c++ file which written by another developer or programmer which is required to execute a our program it's called a Header file.
+                </p>
+            </div>
+            </article>
+        <header>
+            <h2>Variable In C++</h2>
+        </header>
+        <article>
+            <div class="question">
+                <q>what is variable?</q><br>
+                <p>In simple  math variable meaning is which value can be change and we are  giving fix name to it.</p>
+                <p>Variable in Programming:A name of memory location which value can be change but it's has fix name .it's just like a container which can hold value inside it.</p>
+                <br>
+                <q>What is Literal?</q><br>
+                <p>Literal has fix meaning and value which can't change. for example 2 means 2 and it's value is always 2.</p>
+                <q>What is a identifier ?</q><br>
+                <p>Name of variable,class,object,structure,union etc.. which use to identify them it's called identifier.Always give meaningful name to identifier.</p>
+                <q>Variable store in RAM Memory.</q>
+                <header>
+                <h4>syntax of variable in c++</h4>
+                </header>
+                <code> int a=10; <br> int b; <br> b=5; </code><br>
+                <code>int a=10; this line basically tell to compiler take memory location in memory give name to "a" and initialize it's with integer value 10.</code>
+            </div>
+        </article>
+        <header>
+            <h2>Naming Conventions or Rule of Create identifier?</h2>
+        </header>
+        <article>
+            <div class="question">
+                <q>What is identifier?Define it's rule.</q>
+                <p>1.Identifier name always start from "a - z" or "A -Z" or "_" only.</p>
+                <p>2.Identifier name can contain Upper case letters, lower case letters , digit from 0-9 amd underscore only.</p>
+                <p>3.you can't use a any special character like "$","#","*" etc.. inside a identifier name but you can use underscore "_".</p>
+                <p>4.Identifier name is can't be a Keyword.Keyword is special word which has special meaning to a compiler. it's reserve word by compiler in c++.</p>
+            </div>
+        </article>
+        <header>
+            <h2>Data Type in C++</h2>
+        </header>
+        <article>
+            <div class="question">
+                <q>What is a Data type?</q>
+                <p>Data type Define a which type of value variable can store.</p>
+                <p>C++ is static type Programming language means when you are creating variable that time you have to define  it's data type.</p>
+                <p>C++ is dynamic Blinded Programming language means after declaring one type of data you can't change it's data type after declaration.</p>
+                <p><strong>Primitive Data type</strong></p>
+                <ol>
+                    <li>int(integer number )</li>
+                    <li>float(Floating Point)</li>
+                    <li>char(Character)</li>
+                    <li>bool(Boolean value (true and false))</li>
+                    <li>double(floating value with more precise)</li>
+                    <li>short int </li>
+                    <li>long int</li>
+                </ol>
+            </div>
+        </article>
+    </main>
+</body>
+</html>
