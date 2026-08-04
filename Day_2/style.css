@@ -1,0 +1,113 @@
+:root {
+    --bg: #f8fafc;
+    --surface: #ffffff;
+    --text: #0f172a;
+    --muted: #475569;
+    --primary: #4f46e5;
+    --accent: #22c55e;
+    --border: rgba(15, 23, 42, 0.12);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    color: var(--text);
+    background: linear-gradient(135deg, #eef2ff 0%, #f8fafc 50%, #e0f2fe 100%);
+}
+
+body > header {
+    background: linear-gradient(120deg, #312e81, #4f46e5 55%, #7c3aed);
+    color: #fff;
+    padding: 2.2rem 1rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(79, 70, 229, 0.25);
+}
+
+body > header h1 {
+    margin: 0;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    letter-spacing: 0.02em;
+}
+
+main {
+    max-width: 1100px;
+    margin: -0.8rem auto 3rem;
+    padding: 0 1rem 2rem;
+}
+
+main > header {
+    padding: 1.2rem 0 0.4rem;
+}
+
+main > header h2 {
+    display: inline-block;
+    margin: 0;
+    padding: 0.55rem 0.9rem;
+    background: var(--surface);
+    border-left: 5px solid var(--primary);
+    border-radius: 0.75rem;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+    font-size: 1.15rem;
+}
+
+article {
+    margin-bottom: 1.2rem;
+}
+
+.question {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    padding: 1.2rem 1.3rem;
+    box-shadow: 0 10px 35px rgba(15, 23, 42, 0.06);
+}
+
+.question q {
+    display: block;
+    margin-bottom: 0.45rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.question p,
+.question li {
+    color: var(--muted);
+}
+
+.question strong {
+    color: var(--text);
+}
+
+.question code,
+.question pre {
+    display: block;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    background: #0f172a;
+    color: #e2e8f0;
+    overflow-x: auto;
+    font-family: Consolas, "Courier New", monospace;
+}
+
+.question pre {
+    white-space: pre-wrap;
+}
+
+ol {
+    padding-left: 1.2rem;
+}
+
+@media (max-width: 700px) {
+    main {
+        padding: 0 0.8rem 1.5rem;
+    }
+
+    .question {
+        padding: 1rem;
+    }
+}
