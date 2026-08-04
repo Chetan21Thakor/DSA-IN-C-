@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3 : Chapter 3:- Operator</title>
+</head>
+<body>
+    <header>
+        <h1>Operator</h1>
+    </header>
+    <main>
+        <header>
+            <h2>Constants</h2>
+        </header>
+        <article>
+            <div class="question">
+                <q>What is Constant variable?</q><br>
+                <p>Ans:A variable which value can not be changed in entire program it's called Constant  Variable.</p><br>
+                <q>How Create a Constant variable?</q><br>
+                <p>Ans:When you are want Create a Constant Variable then you just have to write <code>const</code> keyword prefix of the normal variable.</p><br>
+                <q>Why we need a Constant Variable?</q><br>
+                <p>Ans:when we are want store a math's constant like Pi=3.14 which value can not be changed during entire program and we want to treat it's like a variable then we create a constant variable.</p><br>
+            </div>
+        </article>
+        <header>
+            <h2>Micros</h2>
+        </header>
+        <article>
+            <div class="question">
+                <q>What is Micros?</q><br>
+                <p>Micros are preprocessor Directive.it's called Symbolic Constant.</p><br>
+                <q>How Micros are different from constant variable?</q><br>
+                <pre>Ans:1.it's a Preprocessor Directive.<br>    2.it's define outside of the main function.<br>    3.it's not taking any extra space in memory.<br>    4.we no need to define it's data type.<br>    5.it's basically used to create a data type modifier or data type symbolic constants.<br>    6.if we are use micros like variable it's value evaluate before starting the execution of Program.</pre>
+            </div>
+        </article>
+         <header>
+            <h2>TypeCasting</h2>
+        </header>
+        <article>
+            <div class="question">
+                <q>What is TypeCasting? define it's type?</q>
+                <p>TypeCasting is Process in which one data type convert into another data type.</p>
+                <p>There are two type of Type conversion are available inside c++. <br>
+                1. Implicit TypeCasting. <br>
+                2. Explicit typeCasting.</p>
+            </div>
+        </article>
+        <header>
+                    <h2>1.Implicit TypeCasting</h2>
+        </header>
+        <article> 
+            <div class="question">
+                <q>what is Implicit TypeCasting?</q>
+                <p>Ans:A conversion of data from one type to another type automatically by the compiler to avoid data lose it's called "Implicit Type conversion".<br><br>
+                1.it's done by compiler.<br>
+                2.no data lose. <br>
+                3.it's also called a "Type Promotion". <br>
+                4.bool->char->int->float->double.<br><br>
+            This Last Line Meaning is when we are doing any operation between to different data type then it's always converted into bigger size data type.<br><br>
+            for Example <br>
+            if we do operation between <br><br> "character data type with a integer  then final result store into integer data type".<br><br>"integer data type with a float  then final result store into float data type".<br><br> "float data type with a Double  then final result store into double data type"</p>
+            </div>
+        </article>
+        <header>
+            <h2>Explicit typeCasting.</h2>
+        </header>
+        <article>
+            <div class="question">
+                <q>What is Explicit typeCasting?</q>
+                <p>Ans:A Conversion of data which done by developer or Programmer at cost of the data lose from one type to another type it's called "Explicit typeCasting." <br> <br>
+                1.it's done by developer or Programmer.<br>
+                2.data lose. <br></p>
+            </div>
+        </article>
+        <header>
+            <h2>Operators</h2>
+        </header>
+        <article>
+            <div class="question">
+                <q>What is Operator?</q>
+                <p>Ans:Operator are special symbol which tells to compiler do some operation. <br> <br>
+                A value or variable between which this operation it done it's called "Operands". <br><br>
+                This Operation statement called "Expression".</p>
+                <p><strong>Type of Operator</strong></p>
+                <ol>
+                    <li>Arithmetic Operator</li>
+                    <li>Logical Operator</li>
+                    <li>Relational Operator</li>
+                    <li>Assignment Operator</li>
+                    <li>Bitwise Operator</li>
+                </ol>
+                <ol>
+                    <li>Arithmetic Operator has two type</li>
+                    <ol>
+                        <li>Binary Operator</li>  <br>:A Operator which need a Two operands to perform a Operation it's called "Binary Operator".  <br> <br>
+                        <ol>
+                            <li>"+"</li>This "+" Operator are used to add two Number.
+                            <li>"-"</li>This "-" Operator are used to Subtract left side operand from right side Operand.
+                            <li>"*"</li>This "*" Operator are used to Multiply two Number.
+                            <li>"/"</li>This "/" Operator are used for division Number.
+                            <li>"%"</li>This "%" Operator are used to find out a reminder after division.it's work on only integer value.
+                        </ol> <br>
+                        <li>Unary Operator</li><br>:A Operator which need a One operands to perform a Operation it's called "Unary Operator". <br> <br>
+                        <ol>
+                            <li>"++"</li>It's a Increment Operator.It's Incress a value by one. it's has two Variant  <br> 1.Post Increment : use value then incress<br> 2.Pre Increment : Incress first then use it.
+                            <li>"--"</li>It's a Decrement Operator.It's Decrees a value by one.it's has two Variant  <br> 1.Post Decrement : use value then Decrees<br> 2.Pre Decrement: Decrees first then use it.
+                        </ol>
+                    </ol>
+                </ol>
+            </div>
+        </article>
+        <header>
+            <h3>Assignment Operator</h3>
+        </header>
+        <article>
+            <div class="question">
+                <q>What is Assignment Operator?</q>
+                <p>Ans:A Operator which assign left side value or variable value to right side variable it's called assignment Operator. <br> <br> for example <br>
+                <code> a=5;<br> this line tell to a compiler left side value 5 assign to variable a or we can also 5 store inside a.</code></p>
+                <p><strong>Compound Assignment Operator</strong></p>
+                <p>This Operator are used when in expression both side we have same variable then using compound assignment operator we can write it's short hand. <br> <br> For Example <br> <br> <code> //* a=a+ 7 Instead of this line i can write this line <br>a+=7; //* Both line meaning are same do same operation to add 7 into a and assign final result into a.
+                </code></p>
+                <ol>
+                    <li>+=</li>this all are short hand of writing a+=5 instead of a=a+5;
+                    <li>-=</li>this all are short hand of writing a-=5 instead of a=a-5;
+                    <li>*=</li>this all are short hand of writing a*=5 instead of a=a*5;
+                    <li>/=</li>this all are short hand of writing a/=5 instead of a=a/5;
+                    <li>%=</li>this all are short hand of writing a%=5 instead of a=a%5;
+                </ol>
+            </div>
+        </article>
+         <header>
+            <h3>Relational Operator</h3>
+        </header>
+        <article>
+            <div class="question">
+                <q>What is Relational Operator?</q>
+                <p>Ans:A Operator which are used t compare two value or variable are equal or not ,greater then ,lesser then it's called Relational Operator.</p> <p>for example <br><br>
+                    <code> int a =5, b=8; <br>cout<< a > b <<p endl; <br> <br> This Operators are Basically used for to compare left side value or variable with right side value or variable.</p>
+                        <ol>
+                    <li> "<" </li> <br>//This Operator Check a left side value is lesser then right side value or not if yes then return true otherwise return false <br> <br>
+                    <li> ">" </li> <br>//This Operator Check a left side value is greater then right side value or not if yes then return true otherwise return false <br> <br>
+                    <li> ">=" </li><br>//This Operator Check a left side value is greater or equal to right side value or not if yes then return true otherwise return false <br> <br>
+                    <li> "<=" </li> <br>//This Operator Check a left side value is lesser  or equal to right side value or not if yes then return true otherwise return false <br> <br>
+                    <li> "=="</li> <br>//This Operator Check a left side value equal to right side value or not if yes then return true otherwise return false <br> <br>
+                    <li> "!=" </li> <br>//This Operator Check a left side value not  equal to right side value or not if yes then return true otherwise return false <br> <br>
+                </ol>
+            </div>
+        </article>
+         <header>
+            <h3>Logical Operator</h3>
+        </header>
+        <article>
+            <div class="question">
+                <q>What is Logical Operator?</q>
+                <p>Ans:A Operator which are used to combine more two or more then two expression.it's called Logical Operator</p>
+                <p>list of Logical Operator</p>
+                <ol>
+                    <li>AND(&&)</li> This Operator check a all expression returning true then only then it's return true other wise it's return false.
+                    <li>OR(||)</li>This Operator check a all expression returning false then only then it's return false other wise it's return True.
+                    <li>NOT(!)</li> This Flip the result true to false and false to true.
+                </ol>
+            </div>
+        </article>
+    </main>
+</body>
+</html>
