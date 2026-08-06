@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4 : Chapter:-4 : Conditional Statement</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Chapter:-4 : Conditional Statement</h1>
+    </header>
+    <main>
+        <article>
+            <p>
+                In Our Real Life we do some task based on some condition for example : <br>
+                1.If today claude are Raining then i go office with umbrella. <br>
+                2.If  today temperature  is above 40<sup>*</sup>C then i drink a lemon Juice otherwise i drink a tea. <br>
+                like this above example we do many task based on a particular condition in Real Life. <br>
+                If we are want do some task in Program based on some Particular condition then we have to use a conditional statement.
+            </p>
+            <p><strong>In C++ we have four conditional statement.</strong></p>
+            <ol>
+                <li><strong>if else</strong></li><br>
+                <li><strong>else if</strong></li><br>
+                <li><strong>Switch</strong></li><br>
+                <li><strong>Ternary Operator</strong></li><br>
+            </ol>
+        </article>
+        <header>
+            <h2>1.if else</h2>
+        </header>
+        <article>
+            <q> how <strong>if else </strong>conditional Statement work ? </q>
+            <pre>
+                I need one Example of a if else statement to explain about it . how it's work? <br><br>                Example  
+                <code>
+                    int age=19; <br>   
+
+                    if (age > 18){<br>
+                        cout <<"you can vote"<< endl;
+                    }else {
+                        cout <<"you cannot vote"<< endl;
+                    }
+                </code>
+                <br>
+            </pre>
+            <p> 
+                <strong>if statement </strong>first check a condition which written inside parenthesis if the condition is true then if block of code is executed. <br> <br>
+                <strong>else statement</strong> is Optional. if you are want to write it then you can otherwise you can skip. <br> <br> <strong>else statement</strong> always come after a one <strong>if statement </strong>. <strong>else statement</strong> executed when the if condition is going false.
+            </p>
+            <p>
+                <strong>if else statement </strong> executed from top to bottom. 
+            </p>
+            <p>
+                <strong>if else statement </strong> contain only one single line of code inside it then you can skip to write curly braces. you can write a multiple <strong>if else statement  </strong> in Program.
+            </p>
+        </article>
+        <header>
+            <h1>2.else if statement</h1>
+        </header>
+        <article>
+            <q> how <strong>else if statement</strong> work ?</q>
+            <p>
+                <strong>else if statement</strong> it's always come after a one <strong>if statement</strong>. <br><br> 
+                after one if statement you can write a multiple <strong>else if statement</strong>. <br> <br> 
+                it's executed from top to bottom if above any one <strong>if statement</strong> condition or any one <strong>else if statement</strong> condition is <strong>true</strong> then it's completely exit from <strong>if , else if statement</strong>. <br><br> 
+                after find one <strong>true condition</strong> it's not check any below conditions although it'a can be <strong>true</strong>.above all condition are false then <strong>else statement</strong> code is executed.
+            </p>
+        </article>
+        <header>
+            <H2>3.Ternary Operator</H2>
+        </header>
+        <article>
+            <q>What is ternary Operator? How it's work?</q>
+            <p>
+                <dfn>Combination of&nbsp; <strong> '?' & ':' </strong> it's called <strong>"Ternary Operator"</strong>. <br> <br>
+                it' called Ternary Operator just because of the it's need three Operands to done it's Operation or task.</dfn> <br> <br>    
+                <strong><i>Syntax of Ternary Operator </i></strong> <br> <br>
+
+                <code>
+                    int age =17;<br> <br>
+                    string result=(age >=18) ? "you can vote" : "you can not vote" ;<br> <br>
+                    cout << result; 
+                </code> <br> <br>
+                Ternary Operator Also first check a condition if the condition is <strong>true</strong> then it's executed  a code or return value which immediately come after a <mark>"question mark  ?"</mark> otherwise it's executed a code or return a value which immediately come after a <mark>" colon :"</mark>. <br> <br>
+                Ternary Operator is short hand of the <strong>if else statement</strong>. it's used when <strong> if else statement </strong> is very small or simple to handle.
+            </p>
+        </article>
+        <header>
+            <h2>Switch Statement</h2>
+        </header>
+        <article>
+            <q>How Switch Statement work?</q>
+            <p>
+                <dfn>
+                    <strong>Switch Statement</strong> is Conditional Statement which used when we want to give multiple option to user so user can select any one of them.
+                </dfn>
+                <br>
+        </article>
+    </main>
+</body>
+</html>
