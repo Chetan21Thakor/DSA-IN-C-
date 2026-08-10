@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 7 : Chapter 7: Function</title>
+    <style>
+      table,
+      thead,
+      tbody,
+      td,
+      th {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Day 7 : Chapter 7: Function</h1>
+    </header>
+    <main>
+      <article>
+        <div class="content">
+          <header>
+            <h2>Function</h2>
+          </header>
+          <q>What is the Function?</q>
+          <p>
+            When our Program become to much lager that time we have to divide
+            Program into small paces it's called a <strong>"Function"</strong>.
+            <br />
+            <br />
+            <dfn
+              >Function is small block of code which do a specific task when
+              it's called.</dfn
+            >
+          </p>
+          <strong><code>Syntax of the Function</code></strong> <br />
+          <br />
+
+          <code>
+            return_type &nbsp;&nbsp;Name_of_function() {<br />
+            <br />
+            //some Task <br /><br />
+            return some_value;<br />
+            }
+          </code>
+          <br />
+          <br />
+          <q>Explain the Syntax of the Function?</q>
+          <p>
+            <strong><code>return_type</code></strong> : This is the return type
+            of the function Means
+            <dfn
+              >After the function is successfully executed which kind of data
+              it's return.</dfn
+            ><br />
+            <br />
+            If the Function returning nothing then it's return type is
+            <strong><code>Void</code></strong> void means Nothing,empty. <br />
+            <br />
+            void is Primitive Data type.
+          </p>
+          <p>
+            <strong><code>Name_of_function() { }</code></strong
+            >: this is the name of the function . you can give any name to your
+            function but it's good practice to give meaning full name to your
+            function so you can easily identify which kind of task this function
+            do.<br />
+            <br />
+            it's user define function.
+            <dfn
+              >User define function means a function which define my a
+              Programer.</dfn
+            >
+            <br />
+            <br />
+            <strong><code>()</code></strong
+            >:Parenthesis are the syntax part of the function . <br />
+            <br />
+            <strong><code>{}</code></strong
+            >:Curly Braces indicate the function block or scope. inside it's you
+            can define a task which perform by the function. <br />
+            <br />
+            <strong><code>return some_value;</code></strong
+            >: It's a last line of the function.when it's executed means
+            function task is successfully executed without any kind of the
+            error. it's return the some value.
+          </p>
+          <strong>Example of the Function</strong>
+          <pre>
+                    <code>
+                            void sayHello() { 
+                                cout << "Hello :)" << endl;
+                            }
+
+                            void assistance(){
+                                sayHello();
+                                cout << "work done" << endl;
+                            }
+
+                            int main () {
+                                assistance();
+                                return 0;
+                            }
+                    </code>
+                </pre>
+          <q>How it's Exactly work ?</q>
+          <p>
+            Execution of the C++ Program it's always start from the
+            <strong>code main()</strong>function. When the
+            <strong><code>main()</code></strong> function call the another
+            function then compiler start execution of the that
+            <strong>calling function</strong> after successfully executing the
+            this calling function when it's return a value it's also return the
+            control to <strong><code>main()</code></strong> function then
+            compiler again start the execution of the
+            <strong><code>main ()</code></strong
+            >function.
+          </p>
+          <q>What are the Parameter?</q>
+          <p>
+            Ans:
+            <dfn
+              >A Parameter are the values which are require to execute a
+              function task and function treat it's like a variable.</dfn
+            >
+          </p>
+          <q>How to define the Parameter?</q>
+          <p>
+            When you are declaring and defining the function that time inside a
+            parenthesis you can define parameter just like declaring variable.
+            <br />
+            <br />
+            parameter are nothing but variable which are declare inside a
+            function definition when you are declaring a function.
+          </p>
+          <strong>Function with Parameter</strong>
+          <pre>
+                    <code>
+                        int sum(int a ,int b) { // variable a and b are parameter
+                            int sum=a+b;
+                            return sum;
+                        }
+                    </code>
+                    <code>
+                        int main () {
+                            cout&lt;&lt;sum(4,5);  //4 and 5 are  Actual Arguments
+                            return 0;
+                        }
+                    </code>
+                </pre>
+          <q>Difference Between Parameter and Arguments</q>
+          <table>
+            <thead>
+              <th>Parameter</th>
+              <th>Arguments</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  Parameter are the variable which are define inside function
+                  definition.
+                </td>
+                <td>
+                  A actual values you pass when you are calling the function
+                  it's called Arguments
+                </td>
+              </tr>
+              <tr>
+                <td>Parameter are different-different value.</td>
+                <td>Arguments are fixed values.</td>
+              </tr>
+              <tr>
+                <td>
+                  Parameter are the copy the value which are pass in argument.
+                </td>
+                <td>it's actual values. passed when function is called.</td>
+              </tr>
+            </tbody>
+          </table>
+          <br />
+          <br />
+          <q>What is the "Default Parameter" ? </q>
+          <p>
+            When you are calling the function if you are just pass only one
+            parameter and function require two parameter to perform it's task
+            and if you are want function can automatically identify the second
+            parameter value by default when you just have to define the second
+            parameter value at the declaration time of the function it;s called
+            the <strong>"Default Parameter"</strong>.
+          </p>
+          <p>
+            When you calling a function with parameter then first parameter
+            value store in first parameter ,second parameter value store in
+            second parameter end so on..
+          </p>
+          <q>What happen in memory when you are calling a function ?</q>
+          <img
+            src="./stack.png"
+            alt="stack memory"
+            height="200px"
+            width="200px"
+          />
+          <p>
+            Ans:We all are know c++ program execution always start from the
+            <strong><code>main()</code></strong> function. step 1:<strong
+              ><code>main()</code></strong
+            >
+            is a function so when the
+            <strong><code>main()</code></strong> function execution is start
+            then in stack memory one stack frame is created for a
+            <strong><code>main()</code></strong
+            >function. <br />
+            <br />
+            This Stack frame is totally allocated for only
+            <strong><code>main()</code></strong> function. <br />
+            <br />
+            this Stack frame store the all the variable and data which are
+            require to execute a <strong><code>main()</code></strong> function.
+            <br />
+            <br />
+
+            step 2:When the <strong><code>main()</code></strong> function call a
+            another <strong>1st calling function</strong> then
+            <strong>1st calling function</strong> execution is start then in
+            stack memory one stack frame is created. <br />
+            <br />
+            This Stack frame is totally allocated for only
+            <strong>1st calling function</strong>. <br />
+            <br />
+            This Stack frame store the all the variable and data which are
+            require to execute a <strong>1st calling function</strong>. <br />
+            <br />
+
+            step 3:When the <strong><code>main()</code></strong> function call a
+            another <strong>1st calling function</strong> and
+            <strong>1st calling function</strong> call a another
+            <strong>2nd Calling function</strong> then
+            <strong>2nd calling function</strong> execution is start then in
+            stack memory one stack frame is created. <br />
+            <br />
+            This Stack frame is totally allocated for only
+            <strong>2nd calling function</strong>. <br />
+            <br />
+            This Stack frame store the all the variable and data which are
+            require to execute a <strong>2nd calling function</strong>. <br />
+            <br />
+
+            step 4:When the <strong>2nd calling function</strong> is executed
+            successfully without any kind of the error it's return a value then
+            it's return the control back to
+            <strong>1st calling function</strong> . it's called
+            <strong>"Return Of The Control"</strong>. <br />
+            <br />
+            After returning the control to function where it's called from this
+            stack frame is deleted from the stack. <br />
+            <br />
+
+            step 5:When the <strong>1st calling function</strong> is executed
+            successfully without any kind of the error it's return a value then
+            it's return the control back to
+            <strong>1st calling function</strong> . it's called
+            <strong>"Return Of The Control"</strong>. <br />
+            <br />
+            After returning the control to <strong><code>main()</code></strong
+            >function where it's called from this stack frame is deleted from
+            the stack. <br />
+            <br />
+
+            step 6:When the <strong><code>Main()</code></strong> function is
+            executed successfully without any kind of the error. <br />
+            <br />
+            then main() function stack frame is deleted from stack. <br />
+            <br />
+
+            <strong>Note:</strong>
+            <b
+              >A function which on the top the stack it's executed currently.</b
+            >
+          </p>
+          <q>What is Function Overloading?</q>
+          <p>
+            Ans:
+            <dfn
+              >A Multiple function with a same name but different parameter it's
+              called function <strong>"overloading"</strong></dfn
+            >. <br />
+            <br />
+            Function Overloading it's not depend on the function return type.
+            <br />
+            <br />
+            It's Differ From <br />
+            <br />
+            1.different number of the parameter 2.different type of the
+            parameter
+          </p>
+          <strong>Example of the function overloading</strong>
+          <pre>
+                <code>
+                    #include&lt;iostream&gt;
+                    using namespace std;
+
+                    int sum(int a , int b){
+                        cout&lt;"first 1  \n";
+                        return a+b;
+                    }
+
+                    int sum(int a , int b ,int c){
+                        cout&lt;"second 2 \n";
+                        return a+b+c;
+                    }
+
+                    double sum(double a , double b){
+                        cout&lt;"third 3\n";
+                        return a+b;
+                    }
+
+                    double sum(int a , double b){
+                        cout&lt;"fourth 4 \n";
+                        return a+b;
+                    }
+
+                    int main(){
+
+                        cout&lt;sum(1,3)&lt;endl;//first sum call. ans :4
+                        cout&lt;sum(1,3,5)&lt;endl;//second sum call. ans :9
+                        cout&lt;sum(1.5,3.5)&lt;endl;//third  sum call. ans :5
+                        cout&lt;sum(1,3.5)&lt;endl;//fourth sum call. ans :4.5
+
+                    }
+                </code>
+            </pre>
+            <q>What is a Scope?</q>
+            <p>Scope refers to the region of the program where a variable is accessible or can be used. <br>
+              type of the scope : <br>
+              1. Local Scope <br> 
+              2. Global Scope <br>
+            </p>
+          <q>What is a Local Scope?</q>
+          <p>Local Scope refers to the region of the program where a variable is accessible or can be used. <br>
+            A variable which is declared inside a function or block it's called local variable and it's scope is only inside that function or block. <br>
+            <strong>Example of the Local Scope</strong>
+            <pre>
+              <code>
+                #include&lt;iostream&gt;
+                using namespace std;
+
+                void fun(){
+                  int a=10; //local variable
+                  cout&lt;&lt;a&lt;&lt;endl;
+                }
+
+                int main(){
+                  fun();
+                  cout&lt;&lt;a&lt;&lt;endl; //error: 'a' was not declared in this scope
+                }
+              </code>
+              2. Global Scope <br>
+              Global Scope refers to the region of the program where a variable is accessible or can be used. <br>
+              A variable which is declared outside of all functions or blocks it's called global variable and it's scope is throughout the program. <br>
+              <strong>Example of the Global Scope</strong>
+              <pre>
+                <code>
+                  #include&lt;iostream&gt;
+                  using namespace std;
+
+                  int a=10; //global variable
+
+                  void fun(){
+                    cout&lt;&lt;a&lt;&lt;endl; //accessible
+                  }
+
+                  int main(){
+                    fun();
+                    cout&lt;&lt;a&lt;&lt;endl; //accessible
+                  }
+                </code>
+            </pre>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
