@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+
+int product(int a, int b)
+{
+    return a + b;
+}
+
+int main()
+{
+    cout << product(4, 3) << endl; // ans :12
+}
