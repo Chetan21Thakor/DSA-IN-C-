@@ -46,4 +46,5 @@ Thumbs.db
 .DS_Store
 
 # Preserve the existing ignored folder if you want it ignored
-First week Revision/
+.vscode/
+Day_8/

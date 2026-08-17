@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Week Revision</title>
+    <style>
+        table,thead,tr,td{
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header><h2>DAY 1</h2></header>
+            <article>
+                <header><h3>Chapter:1 Pseudocode and flowchart</h3></header>
+                <div class="content">
+                    <header><h4>Flowchart</h4></header>
+                    <q>What is Flowchart?</q>
+                    <p>Ans:Flowchart is Graphical representation of the any Problem and algorithm.</p>
+                    <q>What is Algorithm?</q>
+                    <p>Ans:An Algorithm is a step by step solution of any Problem.</p>
+                    <q>Which are components of the Flowchart?</q>
+                    <p>
+                        <ol>
+                            <li>
+                                Oval : This shape is indicate  starting  and ending of the solution or flowchart.
+                            </li>
+                            
+                            <li>
+                                Perrlerrogram : This shape indicate input and output of the solution of flowchart.
+                            </li>
+                            <li>
+                                Rectangle : This shape indicate Process of the solution of flowchart.
+                            </li>
+                            <li>
+                                Diamond: This shape indicate condition and open multiple branch for solution or flowchart.
+                            </li>
+                            <li>
+                                Arrow: This shape indicate control of the flowchart and in which direction flow of the program executed.
+                            </li>
+                    </p>
+                    <hr>
+                    <header><h4>Pseudocode</h4></header>
+                    <q>What is Pseudocode?</q>
+                    <p>Ans:Pseudocode is nothing but it's just way of writing code in simple language so anyone can understand the logic and how the Program logic work.</p>
+                </div>
+            </article>
+            <header>
+                <h2>DAY 2</h2>
+            </header>
+            <article>
+                <header><h3>Chapter:2 Variable and Data Types</h3></header>
+                <div class="content">
+                    <header>
+                        <h4>Boiler PLate code</h4>
+                    </header>
+                    <q>What is Boiler Plate Code?</q>
+                    <p>Ans: A Template code which you have to write every time to write code in c++.</p>
+                    <header><h5>This is the Boiler Plate code of the c++</h5></header>
+                    <code>
+                        #include<iostream> <br>
+                        using namespace std; <br> <br>
+
+                        int main(){ <br>
+                        cout<<"Hello World"; <br>
+                        } <br>
+                    </code>
+                    <q>Explain Each and Every line of the Boiler Plate code.</q>
+                    <p>
+                        <big><strong><code>First Line : #include&lt;iostream&gt;</code></strong></big><br> <br>
+                        This First line of code is PreProcessor Directive.
+                        <q>What is the Preprocessor Directive in c++?</q> <br> <br>
+                        Ans:We can divide this word into two part <br> <br>
+                        1.Directive Means : <dfn>It's a Statement or instruction which for a compiler. it's give a direction to a compiler just because of that it's called Directive. </dfn> <br> <br>
+                        it's can give any kind of instruction to a compiler  <br> <br>
+                        for Example <br> <br>
+                        <strong> include a iostream header file</strong> <br> <br>
+                        <strong> include a cmath header file</strong> <br> <br>
+                        <strong> define  PI equal 3.14</strong> &nbsp;&nbsp;&nbsp;ect.. <br> <br>
+
+                        1.Preprocessor  Means : <dfn>Special type of Instruction or Statement which tell to compiler before the start execution of the Program you have to execute this line.</dfn> <br> <br>
+
+                        <strong>Preprocessor Directive</strong> always start from <strong>#</strong> Symbol.                        
+                    </p>
+                    <p>
+                        <big><strong><code>Second Line : using namespace std;</code></strong></big><br> <br>
+                        This Second line of code is Namespace.
+                        <q>What is the  Namespace in c++?</q> <br> <br>
+                        Ans: <strong>Namespace</strong> is for avoid a Naming Conflict in Program. <br> <br>
+                        <q>What is the  Naming Conflict in c++?</q> <br> <br>
+                        Ans:Naming conflict occurs When we are using a multiple header file inside our Program and more then one Header file contain a same name function,object and class which we want to use in our code or program that time compiler get confused to which header file function and object it's have to use it's called <strong>"Naming conflict"</strong>.  <br> <br>
+                        <q>How Namespace solve This Naming Conflict Problem.</q> <br> <br>
+                        Ans:Namespace it's just like a registry which contain only the declaration part of the Function and Object which define inside a header file. when you are using the function or object that time you just have to mention which namespace function or object you want to use. Then compiler easily identify using a namespace ohh i have to use function which declare inside this particular namespace and define inside this header file. <br> <br>
+                        <q>What is a Header File?</q> <br> <br>
+                        Ans:A Header file is the Pri-written code of the c++.Which Written by another developer but i want to use it. it's contain the many important function and object which i want to inside my program . it's called <strong>"Header File".</strong> <br> <br>
+                    </p>
+                    <p>
+                        <big><strong><code>Third Line : int main()</code></strong></big><br> <br>
+                        This third  line of code is Function. <br> <br>
+                        <q>What is function explain about main Function?</q> <br> <br>
+                        <p>
+                            Ans:Function is block of the code which perform the task which define inside it's block. <br> <br>
+
+                            <code>main ()</code> is Function. <br> <br>
+                            it's Heart of the c++ Program. <br><br>
+                            execution of the C++ Program it's always start form the <code>main ()</code>. 
+                            <br> <br>
+                            it's special function which define only for one time in one single c++ file. <br> <br>
+                            <strong> int </strong> is the return type of the <code> main ()</code> function Means when <code>main ()</code> function is successfully executed without any kind of the error then it's return a integer value otherwise it's throw you error. <br> <br>
+                        </p>
+                        <p>
+                            <big><strong><code>fourth Line : {}</code></strong></big><br> <br>
+                            This Fourth line of code is curly braces. <br> <br>
+                            Curly braces define the block or scope of the <code>main ()</code> function. <br>
+                        </p>
+                        <p>
+                            <big><strong><code>Fifth Line : cout<<"Hello World";</code></strong></big><br> <br>
+                            <q>What is <code>cout</code>?</q> <br> <br>
+                            <p>Ans :Cout is the Object which define inside a iostream heder file and declare inside a std namespace. it's used to print the any thing on terminal window.</p> <br>
+                             <br>
+                            <strong>;</strong> : semicolon is part of the c++ syntax. it's indicate ending of the line. after ending the line if you don't add semicolon <strong><code>;</code></strong> then compiler throw error. <br> <br> <br>
+                            <strong><code>return</code></strong> is the keyword it's integer value when <code> main ()</code> function successfully executed without any error. it's a returning a integer value it's mean you code is successfully executed.
+                        </p>
+
+                        <header>
+                            <h4>Variable</h4>
+                        </header>
+                        <q>What is Variable?</q>
+                        <p>
+                            Ans: <dfn>A variable is the name of the memory location it's just like a container  which store the some value.it's take space in memory. </dfn> <br> <br>
+                            Variable are created in ram memory when the program executed then it's remove from memory.
+                        </p>
+
+                        <q>How Create Variable?</q>
+                        <p>
+                            <strong>Syntax</strong> <br>
+                            <strong><code>datatype name_Of_variable=value;</code></strong><br> <br>
+                            for example <br> <br>
+                            <code> 
+                                int age=21; <br>
+                                float price =95.44;<br>
+                                bool is_adult=true;<br>
+                                char ch='a';<br>
+                            </code>
+                            <big><strong>Different way of the creating a Variable</strong></big> <br> <br>
+                            <code>
+                                <strong>first way</strong> <br> 
+                                int age; <br> 
+                                age=21; <br> <br>
+                                <strong>second way </strong><br>
+                                float price=95.77; <br> <br>
+                               <strong> third  way</strong><br>
+                                int a , b ,c;<br><br>
+                                <strong> forth  way</strong><br>
+                                int a=1 , b=3,c=5;<br><br>
+                                <strong> fifth  way</strong><br>
+                                int a,b,c; <br>
+                                a=b=c;<br><br>
+                            </code>
+
+                        </p>
+
+                        <header>
+                            <h4>Datatype</h4>
+                        </header>
+                        <q>What is Datatype?</q>
+                        <p>
+                            Ans: <dfn>Datatype is the way which tell to compiler my this variable can store a integer,float,character or boolean value inside it and how much memory require to store it.</dfn>
+                        </p>
+                        <p>
+                            <Strong>Note:</Strong>C++ is the Static type Programming language Means when you are declaring a variable that time you have define it's datatype. <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; After defining it's datatype you can not change it's datatype during entire program.it's called "static banding".<br> <br>
+                        </p>
+                        <header>
+                            <h5>List of the Primitive datatype</h5>
+                        </header>
+                        <ol>
+                            <li>Int (Integer)</li>
+                            <li>float (float)</li>
+                            <li>double (double)</li>
+                            <li>Bool (Boolean)</li>
+                            <li>Char (Character)</li>
+                        </ol>
+                    </div> 
+                </article>
+                <header>
+                    <h2>Day 3</h2>
+                </header>
+                <article>
+                    <header>
+                        <h3>Chapter:3 :- Operator</h3>
+                    </header>
+                    <div class="content">
+                    <header>
+                        <h4>Constant Variable</h4>
+                    </header>
+                    <q>What is Constant Variable?</q>
+                    <p>
+                        Ans:A variable which value can't be changed in entire Program after declaring a constant it's called Constant Variable.
+                    </p>
+                    <q>How Create a Constant Variable?</q>
+                    <strong><code>Syntax</code></strong>
+                    <code>
+                        const float PI=3.14;
+                    </code>
+                    <p>When you are creating a constant variable then you must have to initialize it. otherwise it's throw you error.</p>
+                    <q>Difference Between Constant and Micros?</q> <br> <br>
+                    <table style="border: 1px solid black;">
+                        <thead>
+                            <th >Constant</th><th>Micros</th>
+                        </thead>
+                        <tbody>
+                            <tr >
+                                <td>constant is special variable which value can't be changed after it's declaration.</td>  <td>Micros is symbolic constant.</td>
+                            </tr>
+                            <tr>
+                                <td>it's take space in memory</td> <td>it's not take any extra space in memory</td>
+                            </tr>
+                            <tr>
+                                <td>you have to define it's datatype</td> <td>you have to define it's datatype</td>
+                            </tr>
+                            <tr>
+                                <td>it's variable .</td> <td>it's preprocessor directive</td>
+                            </tr>
+                            <tr>
+                                <td>it's define inside a <code> main ()</code> function .</td> <td>it's define outside a <code> main ()</code> function.</td>
+                            </tr>
+
+                            <tr>
+                                <td>it's used define normal constant variable.</td> <td>it's used define datatype modifier.</td>
+                            </tr>
+                            </tbody>
+                    </table>
+                    <br> <br>
+                    <q>What is the Literal?</q>
+                    <p>
+                        Literal is the constant value which meaning and value can't be changed. <br>
+                        for example <br> <br> 
+                        2 values is always 2 and it's always means 2.
+                    </p>
+                    <header>
+                        <h4>Operator</h4>
+                    </header>
+                    <q>What is OPerator?</q>
+                    <p>Ans:A Operator are special symbol which tell to compiler to do this operation.</p>
+
+                    <q>What is OPerands?</q>
+                    <p>Ans:a variable or value which used to do operation . Operand are values and variable in which operation is done.</p>
+
+                    <h5>Arithmetic Operator</h5>
+                    <p>There are  5 Binary arithmetic Operator  and 2 unary arithmetic we have.</p>
+                    <strong>Binary arithmetic Operator</strong> <br> <br>
+                    it's called Binary Operator just because of it's need two operand to perform operation.
+                    <ol>
+                        <li>+</li>:used for addition of two number
+                        <li>-</li>:used for subtraction of two number
+                        <li>/</li>:used for division of two number
+                        <li>*</li>:used for multiplication of two number
+                        <li>%</li>:used to find a reminder after division of the two number.
+                    </ol>
+                    <strong>Unary arithmetic Operator</strong>
+                    it's called Unary Operator just because of it's need one operand to perform operation.
+                    <ol>
+                        <li>++</li> Increment Operator It's incress value by one
+                        <li>--</li>decrement Operator it's decrees  value by one
+                    </ol>
+                    <h5>Assignment Operator</h5>
+                    "=" is know as assignment operator. it's assign a right hand side value in left hand side variable.<br> <br>
+                    <h6>Compound Assignment Operator</h6>
+                    it's just short hand of using arithmetic operator when right hand side and left hand side we have same operator.
+                    <br> <br>
+                    for Example <br>
+                    <code>a=a+5;</code> <br>
+                    then i can also write like this <br>
+                    <code>a+=5;</code><br>
+                    both result are same and perform same operation
+                    <ol>
+                        <li>+=</li>
+                        <li>-=</li>
+                        <li>/=</li>
+                        <li>*=</li> 
+                        <li>%=</li>
+                    </ol>
+                    <header>
+                        <h5>Relational Operator</h5>
+                    </header>
+                    <p>Relational Operator used to compare a two variable or value.</p>
+                    <strong> List of the Relation Operator</strong>
+
+                    <ol>
+                        <li>&gt;</li> it's check the left hand  side value is greater then right hand side if yes then return <strong>true</strong>  otherwise return <strong>false</strong>.
+                        <li>&lt;</li>it's check the left hand  side value is lesser then right hand side if yes then return <strong>true</strong>  otherwise return <strong>false</strong>.
+                        <li>&gt;=</li>it's check the left hand  side value is greater then and equal to right hand side if yes then return <strong>true</strong>  otherwise return <strong>false</strong>.
+                        <li>&lt;=</li>it's check the left hand  side value is lesser then and equal to right hand side if yes then return <strong>true</strong>  otherwise return <strong>false</strong>. 
+                        <li>==</li> it's check the left hand  side value  equal to right hand side if yes then return <strong>true</strong>  otherwise return <strong>false</strong>. 
+                        <li>!=</li> it's check the left hand  side value not equal to right hand side if yes then return <strong>true</strong>  otherwise return <strong>false</strong>.
+                    </ol>
+
+                    <header>
+                        <h5>Logical Operator</h5>
+                    </header>
+                    <p>Logical Operator are used to combine two or more then two condition in one single expression.</p>
+                    <strong> List of the Logical Operator</strong>
+                    <ol>
+                        <li><code>&&</code></li> it's check all the condition which are present in expression is true then only then it's return <strong> true</strong> . If any one condition return a false then it's return <strong>false</strong>.
+                        <li><code>||</code></li>it's check all the condition which are present in expression is false then only then it's return <strong> false</strong> . If any one condition return a true then it's return <strong>true</strong>
+                        <li><code>!</code></li> it's flip then final result of the expression if expression return <strong>true</strong> then it's flip into a <strong>false</strong> .if expression return <strong>False</strong> then it's flip into a <strong>True</strong>.
+                    </ol> 
+                </div>
+            </article>
+            <header>
+                <h2>Day 4</h2>
+            </header>
+            <article>
+                <header>
+                    <h3>Chapter 4 : Condition Statement</h3>
+                </header>
+                <div class="content">
+                    <header>
+                        <h4>ConditionalStatement</h4>
+                    </header>
+                    <q>
+                        What is the conditional?
+                    </q>
+                    <p>
+                        in real life we take some decision based on our condition or situation <br> <br> 
+                        for example <br> <br>
+                        if today is high temperature  then i drink a lemon juice otherwise i drink a tea. <br> <br>
+                        When we want to do some task based on condition in program then we have to use a conditional statement in program <br> <br> c++ Provide 4 conditional 
+                    </p>
+                    <strong>This is list of the Conditional Statement.</strong>
+                    <ol>
+                        <li>if else</li>
+                        <li>else if</li>
+                        <li>switch</li>
+                        <li>Ternary</li>
+                    </ol>
+                    <header>
+                        <h5>if else statement</h5>
+                    </header>
+                    <p>
+                        <strong><code>if else</code></strong> is conditional Statement it's used when we want to do task based on condition.
+                        
+                    </p>
+                </div>
+            </article>
+        </div>
+    </main>
+</body>
+</html>
