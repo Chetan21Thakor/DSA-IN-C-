@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 9 : Chapter : 9:-Pointer</title>
+  </head>
+  <body>
+    <header>
+      <h1>Day 9 : Chapter : 9:-Pointer</h1>
+    </header>
+    <main>
+      <article>
+        <p><strong>Basic About the memory</strong></p>
+        <p>
+          When you are creating a variable then it's tell to compiler take n
+          byte of the space in memory when the program is executing. <br />
+          <br />
+          Memory is divided into a small paces is called byte. <br /><br />
+          each and every byte has a it's unique and individual memory address.
+          <br />
+          <br />
+          Hexadecimal Number system is used to represent a memory location or
+          memory address in memory. <br />
+          <br />
+          it's 16 base Number system . it's contain a digit from 0 - 9 and a -
+          f.
+        </p>
+        <q>What happen when you are creating a variable in your code.</q>
+        <p>
+          When you are creating a variable then it's tell to compiler take n
+          byte of the space in memory when the program is executing. <br />
+          <br />
+          This space has it's own unique memory address in hexadecimal Number.
+          <br />
+          <br />
+        </p>
+        <p><strong> for Example</strong></p>
+        <pre>
+            <code>
+                #include&lt;iostream&gt;
+                using namespace std;
+
+                int main(){
+                    int a;
+                    a=10;
+                    cout&lt;&lt; a &lt;&lt;endl;
+                }
+            </code>
+            </pre>
+        <p>
+          in above example variable <code> a </code> has created inside a memory
+          , it's take 4 byte of the space in memory and it's has it's own unique
+          memory address . <br />
+          <strong>
+            for example <br />
+            it's Memory address is : 0x111ea78;
+          </strong>
+        </p>
+        <p><strong>Address of the Operator : &</strong></p>
+        <p>
+          <strong>&</strong> used for many purpose in c++ . it's used as bitwise
+          & and also used as address of Operator. <br />
+          <strong>&</strong> is address of Operator . it's give you address of
+          the variable. <br />
+          <strong>for example</strong> <br />
+          <br />
+          <code>
+            cout&lt;&lt;Memory address of the a is : &lt;&lt; &a &lt;&lt;endl;
+            <br />
+            <br />
+            <strong
+              ><output>Memory address of the a is : 0x111ea78</output></strong
+            >
+            <br />
+            <br />
+          </code>
+          <strong>&</strong> address of Operator return a memory address of the
+          any variable you can store in variable.
+        </p>
+      </article>
+
+      <article>
+        <header>
+            <h2>Pointer</h2>
+            </header>
+            <q> What is Pointer ? </q>
+            <p>
+            <dfn>
+                Pointer is Special type of the variable which store the memory
+                address of the another variable.
+            </dfn> <br> <br>
+            </p>
+            <q> How to create  Pointer ? </q>
+            <pre>
+                <code>
+                    datatype_of_the_Pointer : <b>Which type of the Pointer you are want to create or which type variable memory address you are want ot store inside a pointer</b> <br> <br>
+                    <strong>datatype_of_the_Pointer *   name_of_Pointer = &name_of_variable;</strong> <br>
+                    <strong>Example :</strong> <br>
+                    int *Ptr= &amp;a;
+                </code>
+            </pre>
+            <ul>
+                <li>Pointer take 8 byte of the space in memory.</li> <br> 
+                <li>You can create any type of the Pointer just like a Variable.</li> <br> 
+                <li>Pointer has it's own memory address.</li> <br> 
+                <li>it's store the memory address only it's can't store normal value or primitive date inside it.</li> <br>
+                <li>Using a Pointer you can access a variable value also and you can modify it.</li>
+            </ul>
+            <q>What is a Dereference Operator ?</q>
+            <p>
+                <dfn>
+                    <strong>*</strong> same like & used for many purpose in c++ * is also used for a many purpose in c++. it's used for a multiplication and also as Dereference Operator. <br> <br>
+                </dfn>
+                <strong>*</strong> it's return the value at address. <br>
+                <strong>for 
+                    example 
+                </strong>
+            </p>
+            <pre>
+                    <code>
+                        cout&lt;&lt;*(&a)&lt;&lt;endl;
+                    </code>
+            </pre>
+            <p>
+                This line give a value of the <code>a</code>. <br> <br> 
+                Using <strong>*</strong> Operator you can easily access the value of the variable using memory address and also you can change it. <br> <br>
+            </p>
+            <pre>
+                <code>
+                    #include&lt;iostream&gt;
+                    using namespace std;
+
+                    int main(){
+
+                        int a;
+                        a=10;
+
+                        int * ptr =&amp;a;
+
+                        cout&lt;&lt; *ptr &lt;&lt;endl;
+
+                        *ptr=20;
+                        
+                        cout&lt;&lt; a &lt;&lt;endl;
+                        cout&lt;&lt; *ptr &lt;&lt;endl;
+                    }
+                </code>
+            </pre>
+            <p>Now<strong> a </strong> value changed from 10 to 20 using Pointer and * Operator.</p>
+        </article>
+
+    <article>
+        <header>
+            <h3>Pointer  to Pointer</h3>
+        </header>
+      <strong> <q>What is Pointer to Pointer ?</q> </strong> 
+      <p>
+        <dfn>
+            Pointer to Pointer is Special type of the Pointer which can store the Memory address the another Pointer.
+        </dfn>
+      </p>
+      <strong> <q>How to create Pointer to Pointer ?</q> </strong> 
+      <pre>
+        <code>
+                    int a;
+                    a=10;
+
+                    int * ptr =&amp;a;
+
+                    int **p_ptr=&amp;ptr;
+        </code>
+      </pre>
+      <p>Using <strong>Pointer to Pointer</strong> you can access the variable and Pointer both. you can modify it's value.</p>
+    </article>
+
+    <article>
+        <header>
+            <h3>Null Pointer</h3>
+        </header>
+        <strong> <q>What is Null Pointer ?</q> </strong> 
+        <p>
+            <dfn>
+                Null Pointer is special type of the Pointer which store a 0x0 memory location. it's used when we are creating pointer but we don't have valid memory address to store inside it.
+                that time we initialize pointer with a value NULL .  <br>
+                "A Pointer which store Null value it's called a NULL Pointer." <br> <br>
+            </dfn>
+            Null Pointer not storing a valid memory address so you can't can dereference it just because of the it's don't have valid memory address to store. <br> <br>
+            It's used When we are don't want to store a garbage Memory address value inside Pointer.
+        </p>
+        <strong> <q>How to create Null Pointer ?</q> </strong> 
+      <pre>
+        <code>
+                    int * ptr=NULL;
+                    //second way
+                    int * ptr=0;
+        </code>
+    </article>
+
+    <article>
+        <header>
+            <h3>Passing Argument to Function</h3>
+        </header>
+        <p>There are to Way to pass a Arguments to a Function?</p>
+        <ol>
+            <li>Pass By Value</li>
+            <li>Pass By Reference
+                <ol>
+                    <li>Using a Pointer</li>
+                    <li>Using a Reference Variable</li>
+                </ol>
+            </li>
+        </ol>
+        <P>
+            <strong>Pass By value</strong> <br> <br>
+            When we passing a Argument to a function it's by default done by a pass by value.
+        </P>
+        <q>What Exactly Happen in Pass By Value? </q>
+        <p>
+            When we are Passing Argument to a Function then function store copy of the argument in parameter and all the operation done on the parameter it's don't reflect on the actual argument.
+        </p>
+        <P>
+            <strong>Pass By Reference</strong> <br> <br>
+            When we passing a Argument to a function it's by default done by a pass by value.
+        </P>
+        <q>What Exactly Happen in Pass By reference? </q>
+        <p>
+            When we are Passing Argument by Reference to a Function then function store memory address of the passing argument and all the operation done on the actual argument just because of it's both are pointing same memory location. it's  reflect on the actual argument.
+        </p>
+        <p>
+            <strong>There are two way to pass Argument to function by Reference</strong>
+            <ol>
+                <li>Using a Pointer</li>
+                <li>Using a Reference Variable</li>
+            </ol>
+        </p>
+         <strong> <q>What is  Reference Variable?</q> </strong>
+         <p>
+            A Reference Variable is the alternative name (alias) of the already exiting variable.
+            <br> <br>
+            Means giving another name to same variable which refer a same memory address.
+         </p>
+         <p>
+            <strong>Example of the Pass By Value and pass By Reference</strong>
+         </p>
+         <pre>
+            <code>
+                
+            </code>
+         </pre>
+        </article>
+    </main>
+  </body>
+</html>
