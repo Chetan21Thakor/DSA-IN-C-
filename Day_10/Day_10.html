@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 10 : Chapter :- 10 : Array</title>
+  </head>
+  <body>
+    <header>
+      <h1>Chapter :- 10 : Array</h1>
+    </header>
+
+    <main>
+      <article>
+        <header>
+          <h3>Array Data Structure</h3>
+        </header>
+        <div class="content">
+          <q> What is Data? </q>
+          <p>
+            <dfn> Data is important information about any specific thing. </dfn>
+          </p>
+
+          <q> What is Structure? </q>
+          <p>
+            <dfn> Structure means a specific manner. </dfn>
+          </p>
+
+          <q> What is Data Structure? </q>
+          <p>
+            <dfn>
+              Data Structure is Way of the arranging a Data into specific
+              manner.
+            </dfn>
+          </p>
+
+          <q> Why Array is exists? </q>
+          <p>
+            <dfn>
+              When we are want store a multiple value without a creating a
+              multiple different variable to store it then array is used to
+              store a multiple value in one single variable.
+            </dfn>
+          </p>
+
+          <q> What is Array? </q>
+          <p>
+            <dfn>
+              Array is special type of the variable which can store a multiple
+              value of the same data type in continuous memory location. <br />
+              <br />
+              Array is Linear Data Structure Means it's store a Value in linear
+              manner in memory. <br />
+              <br />
+            </dfn>
+            Array use index value to access it's element. <br />
+            <br />
+            index value represent the Position of the Array Element. <br />
+            <br />
+            Array index start from 0 to n-1. <br />
+            <br />
+            C++ is 0 index base Programming language.
+          </p>
+        </div>
+      </article>
+      <article>
+        <header>
+          <h3>Array Creation</h3>
+        </header>
+        <div class="content">
+          <q> How Create Array in C++? </q>
+          <p>There are Three Way to Create Array in C++.</p>
+          <pre>
+                    <code>
+                        int arr[10]; 
+                         <b>
+                            //* This line tell to compiler that "take continuous memory location in memory to store a 10 integers value in one single variable which name
+                             is arr."
+                    
+                            //* if you are not initialize array with valid value then it's store a garbage value inside it.
+                       </b>
+                        
+                        int arr1[10]={1,2,3};
+                        <b>
+                            //*This line tell to compiler that "take continuous memory location in memory to store a 10 integers value in one single variable which name 
+                            is arr.initialize array with {1,2,3}."
+
+                        </b>
+                        int arr3[]={1,2,3}; 
+                         <b>
+                            //*This line tell to compiler that "take continuous 3 memory location in memory to store a 3  integers value which is already define right hand 
+                            side in one single variable which name is arr  .initialize array with {1,2,3}." 
+                        </b>
+                    </code>
+                </pre>
+            </div>
+      </article>
+      <article>
+        <header>
+            <h3>
+                Input and Output of the Array
+            </h3>
+        </header>
+        <div class="content">
+            <q>How take input and how to so output of the Array</q>
+            <pre>
+                <code>
+                    int arr[10];
+
+                    int n=sizeof(arr)/sizeof(int);
+                    <b>
+                    //* Input of the array. 
+                    //* we can use a for loop to take input and so output in array. three thing we need to do that 
+                    /*
+                        1.initialization 
+                            for that we very well know that array index always start from a 0.
+
+                        2.Updation
+                            for that we very well know that array index always start from a 0 and increase by one upto last index of the array.
+
+                        3.Condition where to stop loop
+                            for that we need array length 
+                            sizeof(arr) this function give us a entire size of the array based on it's data type
+                            for find out the length   array  we just have to divide a  entire size of array by it's data type size.
+                            formula :
+                            length= sizeof(arr) /  sizeof(int) 
+                    */
+                    </b>
+                    for (int i = 0; i &lt; n; i++)
+                    {
+                        cin &gt;&gt; arr[i];
+                    }
+
+                    <b>//* output of the array</b>
+                    for (int i = 0; i &lt; n; i++)
+                    {
+                        cout &lt;&lt; arr[i] &lt;&lt; "\n";
+                    }
+
+                    <b>//* Length of the array</b>
+                    cout &lt;&lt; "Length of the array : " &lt;&lt; sizeof(arr) / sizeof(int) &lt;&lt; endl;
+                </code>
+            </pre>
+        </div>
+      </article>
+      <article>
+        <header>
+            <h3>Array Is Pointer</h3>
+        </header>
+        <div class="content">
+            <q> Is Array  Pointer?</q>
+            <pre>
+                <code>
+                    int a = 10;
+
+                    int *ptr = &amp;a;
+
+                    int arr[] = {1, 2, 3, 4, 5};
+
+                    int n = sizeof(arr) / sizeof(int);
+
+                    cout &lt; ptr &lt; endl;
+
+                    cout &lt;&lt; "Array name is Pointer it's Pointe to first element of the " &lt;&lt; arr &lt;&lt; endl; 
+                    <b>//* This line Prove that Array name is Pointer in c++;</b>
+
+                    cout &lt;&lt; "memory address &arr[0] is " &lt;&lt; &arr[0] &lt;&lt;" =  Memory address of the arr  = "&lt;&lt;arr&lt;&lt; endl;
+
+                    <b>//* in C++ Array is Pointer or Array name is Pointer which Always Pointing to the first Element of the Array.</b>
+
+                    <b>//* using this Array Pointer you can access and modify  the Array Element.</b>
+
+                    printArray(arr,n);
+                    <b>//* When are passing array to function it's always passed by reference . it's mean all the changes which we made in function in Array it's all are 
+                        reflect in original array.</b>
+
+                    <b>//*  When are passing array to function  it's only pass the array pointer not entire array to function just because of that we can't can calculate 
+                        array length in function so always when we are passing array to function we always pass with it's size or length.</b>
+
+
+                    void printArray(int arr[] ,int n)
+                    {
+
+                        <b>// ! int n = sizeof(arr) / sizeof(int); it's not give length of the Array . </b>
+
+                        <b>//*  When are passing array to function  it's only pass the array pointer not entire array to function just because of that we can't can calculate 
+                            array length in function so always when we are passing array to function we always pass with it's size or length.</b> 
+
+                        for (int i = 0; i < n; i++)
+                        {
+                            cout &lt;&lt; "*(arr + "&lt;&lt;i&lt;&lt;") doing this : "&lt;&lt;*(arr + i) &lt;&lt; " || is exact equal to doing this arr["&lt;&lt;i&lt;&lt;"]: "&lt;&lt; arr[i]&lt;&lt;endl;
+                        }
+                    }
+                </code>
+            </pre>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
