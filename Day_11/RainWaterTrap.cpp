@@ -23,9 +23,10 @@ int rainWaterTrap(int height[], int n)
 
     for (int i = 0; i < n; i++)
     {
-        int currWaterTrapped = min(leftMax[i],rightMax[i] ) - height[i];
-        
-        if(currWaterTrapped > 0){
+        int currWaterTrapped = min(leftMax[i], rightMax[i]) - height[i];
+
+        if (currWaterTrapped > 0)
+        {
             totalwaterTrapped += currWaterTrapped;
         }
     }

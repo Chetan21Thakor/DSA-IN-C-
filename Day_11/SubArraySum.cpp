@@ -1,28 +1,33 @@
-#include<iostream>
-using namespace std; 
+#include <iostream>
+using namespace std;
 
-void subArray(int arr[],int n){
+void subArray(int arr[], int n)
+{
 
-    for(int i =0; i<n;i++){
-        
-        for(int j=i;j<n;j++){
+    for (int i = 0; i < n; i++)
+    {
 
-            int currSum=0;
+        for (int j = i; j < n; j++)
+        {
 
-            for(int k=i;k<=j;k++){
+            int currSum = 0;
 
-                currSum+=arr[k];
+            for (int k = i; k <= j; k++)
+            {
+
+                currSum += arr[k];
             }
-            cout<<currSum <<" ";
+            cout << currSum << " ";
         }
-        cout<<endl;
-    }
+        cout << endl;
+    } /*  */
 }
 
-int main(){
+int main()
+{
 
-    int arr[]={1,2,3,4,5};
-    int n = sizeof(arr)/sizeof(int);
+    int arr[] = {1, 2, 3, 4, 5};
+    int n = sizeof(arr) / sizeof(int);
 
-    subArray(arr,n);
+    subArray(arr, n);
 }

@@ -245,6 +245,35 @@
          </p>
          <pre>
             <code>
+                #include<iostream>
+                using namespace std;
+
+
+                // Using a Pointer
+                void ChangeA(int * ptr){
+                    *ptr=20;
+                    cout&lt;&lt;*ptr&lt;&lt;endl;
+                }
+
+                //Using a Reference Variable
+                void ChangeA2(int &alias){
+                    alias=30;
+                    cout&lt;&lt;alias&lt;&lt;endl;
+                }
+
+                int main(){
+
+                    int a;
+                    a=10;
+                    cout&lt;&lt;a&lt;&lt;endl;
+
+                    ChangeA(&a);
+                    cout&lt;&lt;a&lt;&lt;endl;
+                    
+                    ChangeA2(a);
+
+                    cout&lt;&lt;a&lt;&lt;endl;
+                }
                 
             </code>
          </pre>

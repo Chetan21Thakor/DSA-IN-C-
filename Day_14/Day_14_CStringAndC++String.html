@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 14 : Chapter 14 : CString and C++ String</title>
+  </head>
+  <body>
+    <header>
+      <h1>Chapter 14 : CString and C++ String</h1>
+    </header>
+    <main>
+      <article>
+        <div class="content">
+          <strong>Character Data Type</strong>
+          <p>
+            Character data type is primitive data type. <br />
+            <br />
+            It's take 1 byte of space in memory. <br />
+            <br />
+            It's can store alphabet 'a' - 'z' , 'A' - 'Z' ,digit '0' - '9',
+            escape sequence Character '\t','\n', special Character
+            '*','$','#','@' ect..
+          </p>
+          <pre>
+                    <code>
+                        #include &lt;iostream&gt;
+                        #include &lt;cstring&gt;
+                        using namespace std;
+
+                        int main(){
+                            //which type of character value character data type can store.
+                            char ch='a';
+                            char ch1='!';
+                            char ch2='5';
+                            char ch3='A';
+                            char ch4='\n';
+                        }
+                    </code>
+                </pre>
+          <p>
+            internally all the Character are store in memory in from of the
+            Binary number when it's convert into decimal number then it's
+            represent as integer value. <br />
+            <br />
+            In Integer Each and Every Character are represent as ASCI code. Each
+            and Every Character it's own and unique ASCI code. <br />
+            <br />
+            ASCII Stand for : American Stander Code Interchangeable Information.
+            It's represent the 128 Character with is unique code. <br />
+            <br />
+            ASCI Code of 'a' is 97. <br />
+            <br />
+            ASCI Code of 'A' is 65. <br />
+            <br />
+
+            You can easily check it's ASCI Code using explicity typecasting.
+            <br />
+            <br />
+            Converting Character data into integer Data.
+          </p>
+          <pre>
+                <code>
+                    int ascii_code_a=int('a'); // 97
+                    int ascii_code_A=int('A'); //65
+                </code>
+            </pre>
+          <strong
+            ><q
+              >How to find out the index or position of the any Character in
+              English lower case and uppercase alphabet?</q
+            ></strong
+          >
+          <pre>
+                <code>
+                    //position of any small letter in lowercase alphabet.
+                    int pos =ch-'a';
+                    cout &lt;&lt; pos&lt;&lt;endl;
+
+                    //position of any uppercase letter in uppercase alphabet.
+                    int pos =ch-'A';
+                    cout &lt;&lt; pos&lt;&lt;endl;
+                </code>
+            </pre>
+          <strong>Character Array Or C String</strong>
+          <p>
+            Character is collection of the character. <br />
+            <br />
+            Character Array used to store string. <br />
+            <br />
+            String is any textual data , it's can be name, password, username,
+            massage anything. <br />
+            <br />
+            C string or Chapter Array string explicitly end by the null
+            Character. <br />
+            <br />
+            it's escape sequence Character which ASCII Code is : 0. <br />
+            <br />
+            String literal : A String which has fix value and fix meaning.
+            <br />
+            <br />
+          </p>
+          <strong><q>How to Create a C String ?</q></strong>
+          <pre>
+                <code>
+                    char ch9[7]={'c','h','e','t','a','n','\0'}; // in this way you have explicitly add null Character '/0'. <br>
+                    char ch8[]={'c','h','e','t','a','n','\0'}; // in this way you have explicitly add null Character '/0'.<br>
+                    char ch10[]="chetan"; //it's string literal. when you are creating string using a string literal then you need to add null character.  <br>
+                    char ch7[7]="chetan"; //it's string literal. when you are creating string using a string literal then you need to add null character. <br>
+                </code>
+            </pre>
+          <p>Length of the string you can find out using to way</p>
+          <ol>
+            <li>using sizeof() function</li>
+            <li>using strlen() function</li>
+          </ol>
+          <strong> 1. using sizeof() function </strong>
+          <pre>
+            <code>
+                char ch5[]="chetan";
+                int n=sizeof(ch5)/sizeof(char);
+            </code>
+          </pre>
+          <strong> 2. using strlen() function </strong>
+          <pre>
+            <code>
+                char ch5[]="chetan";
+                int n=strlen(ch5);
+            </code>
+          </pre>
+          <p>
+            you can access C string Each character using it's index value. index
+            value start from 0.
+          </p>
+          <strong><q>How to take string as input?</q></strong>
+          <p>Length of the string you can find out using to way</p>
+          <ol>
+            <li>using cin object</li>
+            <li>using cin.getline() function</li>
+          </ol>
+          <strong> 1. using cin object </strong>
+          <pre>
+            <code>
+                char ch11[20];
+
+                cin&gt;&gt;ch11;
+                cout&lt;&lt;ch11&lt;&lt;endl;
+            </code>
+          </pre>
+          <p>
+            Using this has one issue you can't enter multi word string as input.
+            cin object ignore all the character and word which come after one
+            empty space character' '.
+          </p>
+          <strong> 1. using cin.getline() function </strong>
+          <pre>
+            <code>
+                char ch11[20];
+
+                cin.getline(ch11,20,'.');
+                cout&lt;&lt;ch11&lt;&lt;endl;
+            </code>
+          </pre>
+          <p>
+            getline() function take three arguments as parameter.it's can take
+            multi word string as input, sentence, massage.
+          </p>
+          <ol>
+            <li>character array where you want to store string</li>
+            <br />
+            <li>maximum length of the input string</li>
+            <br />
+            <li>
+              third arguments is optional .It's delimiter which define after
+              which character you want to ignore input string.
+            </li>
+            <br />
+          </ol>
+          <strong><q>How C string are store in memory ?</q></strong>
+          <p>
+            C string are store in memory just like normal array but just one
+            deference is it's end with null character '/0'.
+          </p>
+          <fieldset style="display: inline">
+            C String in memory <br />
+            <br />
+            <table style="border: 1px solid black">
+              <tr style="border: 1px solid black">
+                <td style="border: 1px solid black; padding: 10px 18px">c</td>
+                <td style="border: 1px solid black; padding: 10px 18px">h</td>
+                <td style="border: 1px solid black; padding: 10px 18px">e</td>
+                <td style="border: 1px solid black; padding: 10px 18px">t</td>
+                <td style="border: 1px solid black; padding: 10px 18px">a</td>
+                <td style="border: 1px solid black; padding: 10px 18px">n</td>
+                <td style="border: 1px solid black; padding: 10px 18px">/0</td>
+              </tr>
+            </table>
+            <strong>Memory location</strong>
+            <table style="border: 1px solid black">
+              <tr style="border: 1px solid black">
+                <td style="border: 1px solid black; padding: 10px">100</td>
+                <td style="border: 1px solid black; padding: 10px">101</td>
+                <td style="border: 1px solid black; padding: 10px">102</td>
+                <td style="border: 1px solid black; padding: 10px">103</td>
+                <td style="border: 1px solid black; padding: 10px">104</td>
+                <td style="border: 1px solid black; padding: 10px">105</td>
+                <td style="border: 1px solid black; padding: 10px">106</td>
+              </tr>
+            </table>
+          </fieldset>
+          <br />
+          <br />
+          <strong>Passing C String to function</strong>
+          <p>
+            We very well know that array name is Pointer and C string is
+            Character array so when we passing C String to function then we are
+            just passing it's memory location or pointer of the array not entire
+            array so you have to pass C String with it's length.
+          </p>
+          <pre>
+            <code>
+                void printCstring(char str[], int n){
+
+                    for(int i=0;i&lt;n;i++) {
+
+                        cout&lt;&lt;str[i]&lt;&lt;" ";
+                    }
+                }
+            </code>
+          </pre>
+          <p>
+            Second Way of accessing a C String Each Element.C String is array
+            name is pointer so we can also access a C String each element using
+            pointer arithmetic and Dereference Operator.
+          </p>
+          <pre>
+            <code>
+                cout&lt;&lt;*(ch + 0)&lt;&lt;endl;
+                cout&lt;&lt;*(ch + 1)&lt;&lt;endl;
+                cout&lt;&lt;*(ch + 2)&lt;&lt;endl;
+                cout&lt;&lt;*(ch + 3)&lt;&lt;endl;
+                cout&lt;&lt;*(ch + 4)&lt;&lt;endl;
+            </code>
+          </pre>
+          <p><strong>C String Function</strong></p>
+          <p>list of some useful C String Function.</p>
+          <ol>
+            <li>strlen(name_of_c_string)</li>
+            <li>strcpy(src_string,dest_string)</li>
+            <li>strcat(str1,str2)</li>
+            <li>strcmp(str1,str2)</li>
+          </ol>
+          <strong>1. strlen(name_of_c_string)</strong>
+          <p>
+            This Function return a length of the String excluding null
+            character. it's take c string as arguments
+          </p>
+
+          <strong>2. strcpy(dest_string,src_string)</strong>
+          <p>
+            it's copy second argument string into first string. It's take two
+            arguments as parameter.
+          </p>
+
+          <strong>3. strcat(str1,str2)</strong>
+          <p>
+            it's concatenate second argument string into first string. It's take
+            two arguments as parameter.
+          </p>
+
+          <strong>4. strcmp(str1,str2)</strong>
+          <p>
+            it's compare two string. if first string first character ascii code
+            greater then second string first character ascii code then it's
+            positive value , if both string are equal then it's return 0 , if
+            first string first character ascii code lesser then second string
+            first character ascii code then it's negative value . It's take two
+            arguments as parameter.
+          </p>
+          <strong>example</strong>
+          <pre>
+            <code>
+                char str[]="hello";
+                char str1[]="world";
+                char str2[10];
+
+                cout&lt;&lt;"length of string is : "&lt;&lt;strlen(str)&lt;&lt;endl;
+                cout&lt;&lt;"Copy src string  into dest string : "&lt;&lt;strcpy(str2,str)&lt;&lt;endl;
+                cout&lt;&lt;"Concatenate src string  into dest string : "&lt;&lt;strcpy(str2,str)&lt;&lt;endl;
+                cout&lt;&lt;"Compare two string : "&lt;&lt;strcpy(str2,str)&lt;&lt;endl;
+            </code>
+                <strong>output</strong>
+            <output>
+                length of string is : 5
+                Copy src string  into dest string : hello
+                Concatenate src string  into dest string : hello world
+                Compare two string : -1
+            </output>
+          </pre>
+        </div>
+      </article>
+      <article>
+        <header><h4>C++ String</h4></header>
+        <div class="content">
+          <strong><q>What is a C++ String?</q></strong>
+          <p>
+            <dfn
+              >C++ String is Object of the pre-defined class String in STL.STL
+              is C++ Stander Template Library which contain a definition of the
+              String , vector, linked list,stack ,queue different-different data
+              structure logic and Class of that data structure Library.</dfn
+            >  <br> <br>
+            STL Contain a useful header file of the string,vector,stack ,queue. <br> <br>
+          </p>
+          <ul>
+            <li>C++ String has different-different useful  member function.</li> <br>
+            <li>C++ String are dynamic size (Their size can be change at run time).</li> <br>
+            <li>C++ String Support Operator lik ==,&lt;,&gt;,+ ect.</li> <br>
+            <li>C++ String Store at contiguous memory location.</li> <br>
+            <li>C++ String take 32 byte of space in memory.</li> <br>
+            <li>too iterate on the c++ string each character you can use <code>for each loop</code></li>.<br>
+          </ul>
+          <pre>
+            <code>
+              #include<iostream>
+              #include<string>
+              using namespace std;
+
+
+              int main(){
+
+                  //* Creation of the C++ string.
+                  std::string name="chetan";
+
+                  //* How much memory space take in memory
+                  cout&lt;&lt;sizeof(string)&lt;&lt;" = "&lt;&lt;sizeof(name)&lt;&lt;endl;//* 32 byte.
+
+                  // * printing string
+                  cout&lt;&lt;name&lt;&lt;endl;
+
+                  //*input a c++ string
+                  cin>>name;//* first way
+                  getline(cin,name,'.'); //*second way
+
+                  //* useful member function of the c++ string
+                  name.append(" Thakor");
+                  cout&lt;&lt;"Append at end of the string"&lt;&lt;name&lt;&lt;endl;
+
+                  int n=name.length();
+                  cout&lt;&lt;"Length of the string is:"&lt;&lt;n&lt;&lt;endl;
+
+                  string substr1=name.substr(0,6);
+                  cout&lt;&lt;"sub str is :"&lt;&lt;substr1&lt;&lt;endl;
+
+                  int idx=name.find("chetan",8);
+                  cout&lt;&lt;"Index of word is : "&lt;&lt;idx&lt;&lt;endl;
+
+                  name.assign("hi");
+                  cout&lt;&lt;"Assign a new string : "&lt;&lt;name&lt;&lt;endl;
+
+                  name.push_back('.');
+                  cout&lt;&lt;"pushing one character at end : "&lt;&lt;name&lt;&lt;endl;
+
+                  char ch=name.at(2);
+                  cout&lt;&lt;"Character present at index : "&lt;&lt;ch&lt;&lt;endl;
+
+                bool is= name.starts_with('h');
+                cout&lt;&lt;"start with specific string"&lt;&lt;is&lt;&lt;endl;
+
+                //* C++ string is dynamic in size
+                cout&lt;&lt;name&lt;&lt;endl;
+
+                cout&lt;&lt;"length of string change run time."&lt;&lt;name.length()&lt;&lt;endl;
+                name.assign("Chetan Thakor");
+                cout&lt;&lt;"length of string change run time."&lt;&lt;name.length()&lt;&lt;endl;
+
+                //* C++ String Operation + ,==,>,< ect .
+
+                string str=name + '.';
+                cout&lt;&lt;name&lt;&lt;endl;
+                cout&lt;&lt;"string concatenating : "&lt;&lt;str&lt;&lt;endl;
+
+                bool is1=name &gt; "a";
+                cout&lt;&lt;name&lt;&lt;endl;
+                cout&lt;&lt;is1&lt;&lt;endl;
+
+                bool is2=name &lt; "a";
+                cout&lt;&lt;name&lt;&lt;endl;
+                cout&lt;&lt;is2&lt;&lt;endl;
+
+                bool is3=name == "Chetan Thakor";
+                cout&lt;&lt;name&lt;&lt;endl;
+                cout&lt;&lt;is3&lt;&lt;endl;
+
+                bool is4=name != "Chetan Thakor";
+                cout&lt;&lt;name&lt;&lt;endl;
+                cout&lt;&lt;is4&lt;&lt;endl;
+
+                  bool is5=name &gt "c";
+                cout&lt;&lt;name&lt;&lt;endl;
+                cout&lt;&lt;is5&lt;&lt;endl;
+
+                bool is6=name &lt; "Chetan Thakor .";
+                cout&lt;&lt;name&lt;&lt;endl;
+                cout&lt;&lt;is6&lt;&lt;endl;
+
+                //* for each loop on c++ string to access a each character of the c++ string.
+
+                for(char ch : name){
+                  cout&lt;&lt;ch&lt;&lt;" ";
+                }
+              }
+            </code>
+          </pre>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

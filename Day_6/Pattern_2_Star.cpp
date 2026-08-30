@@ -1,15 +1,14 @@
 #include <iostream>
 using namespace std;
 
-void Pattern_1_Number_square(int n)
+void Pattern_2_Star(int n)
 {
 
     for (int i = 1; i <= n; i++)
     {
-
-        for (int j = 1; j <= n; j++)
+        for (int j = 1; j <= i; j++)
         {
-            cout << i << " ";
+            cout << "* ";
         }
         cout << endl;
     }
@@ -17,5 +16,5 @@ void Pattern_1_Number_square(int n)
 
 int main()
 {
-    Pattern_1_Number_square(6);
+    Pattern_2_Star(6);
 }

@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 13 : Chapter 12:2D Array</title>
+  </head>
+  <body>
+    <header>
+      <h1>2D Array</h1>
+    </header>
+    <main>
+      <article>
+        <div class="content">
+          <q><strong>What is Multidimensional Array?</strong></q>
+          <p>
+            <dfn
+              >An Array which has more then one Dimension it's called
+              "Multidimensional Array."</dfn
+            >
+            <br />
+            <br />
+            1D Array : An Array which has only a 1 Dimension it's called "1D
+            Array".it's store data into linear manner at continuous memory
+            location.In 1D Array you can only Travel Linearly on data in one
+            Direction only. <br />
+            <br />
+
+            2D Array : An Array which has 2 Dimension it's called "2D
+            Array".it's store data into Matrix or table or Row & Column formate
+            at continuous memory location.In 2D Array you can Travel Row Wise or
+            Column Wise on data in two Direction.<br />
+            <br />
+
+            3D Array : An Array which has 3 Dimension it's called "3D
+            Array".it's store data into Cube formate at continuous memory
+            location.In 3D Array you can Travel Row Wise or Column Wise or Depth
+            Wise on data in three Direction.
+          </p>
+        </div>
+      </article>
+
+      <article>
+        <div class="content">
+          <q><strong>What is 2D Array?</strong></q>
+          <p>
+            <dfn
+              >An Array which has more then one Dimension it's called
+              "Multidimensional Array."</dfn
+            >
+            <br />
+            <br />
+            2D Array : An Array which has 2 Dimension it's called "2D
+            Array".it's store data into Matrix or table or Row & Column formate
+            at continuous memory location.In 2D Array you can Travel Row Wise or
+            Column Wise on data in two Direction.<br />
+            <br />
+          </p>
+          <strong><q>How to Create A 2D Array in C++?</q></strong>
+          <p>
+            <strong>Syntax of 2D Array.</strong>
+          </p>
+          <pre>
+          <code>
+            #include &lt;iostream&gt; 
+            using namespace std; 
+            
+            int main() { 
+
+                int twoDimensionalArr[3][3]={ 
+                    {1,2,3}, 
+                    {4,5,6}, 
+                    {7,8,9}
+                };
+            }
+          </code>
+          </pre>
+          <p>
+            just like a normal Array you have to define which data type of 2d
+            array you are want to create. then name of the 2D array in first []
+            you have to define how many number of row and in second [] you have
+            to define how many number of column. initialize an Array with some
+            value other wise it's store garbage value.
+          </p>
+        </div>
+        <strong><q>How to access A 2D Array element?</q></strong>
+        <pre>
+          <code>
+            #include &lt;iostream&gt; 
+            using namespace std; 
+            
+            int main() { 
+
+                int twoDimensionalArr[3][3]={ 
+                    {1,2,3}, 
+                    {4,5,6}, 
+                    {7,8,9}
+                };
+
+                cout&lt;twoDimensionalArr[0][0]&lt;endl;
+                cout&lt;twoDimensionalArr[0][1]&lt;endl;
+                cout&lt;twoDimensionalArr[0][2]&lt;endl;
+
+            }
+          </code>
+          </pre>
+        <p>
+          just like a normal Array you have to use index value of the matrix
+          cell to access a 2d array element. nameOfArray [0] first row index
+          [0]second column index. 0 , 0 row index is zero : 0 and Column index
+          is also zero : 0 . we try to access first element of the array using 0
+          , 0.
+          <br />
+          <br />
+          Each and Every matrix cell has it's own unique cell index. using cell
+          index you can easily access a 2d Array each element.
+        </p>
+        <strong><q>How to take a input Each 2D Array element?</q></strong>
+        <pre>
+            <code>
+                #include &lt;iostream&gt; 
+                using namespace std; 
+                
+                int main() { 
+
+                    int twoDimensionalArr[3][3]={ 
+                        {1,2,3}, 
+                        {4,5,6}, 
+                        {7,8,9}
+                    };
+
+                    cout&lt;twoDimensionalArr[0][0]&lt;endl;
+                    cout&lt;twoDimensionalArr[0][1]&lt;endl;
+                    cout&lt;twoDimensionalArr[0][2]&lt;endl;
+
+                    for(int i=0;i&lt;3;i++) {
+
+                        for(int j=0;j&lt;3;j++) {
+
+                            cin&gt;&gt;twoDimensionalArr[i][j];
+                        }
+                    }
+                }
+            </code>
+          </pre>
+        <p>
+          to take input in each element of the 2D array you have to use matrix
+          cell index using nested loop. outer loop for row.it's iterate on the
+          row. inner loop for column. it's iterate on the each column for the
+          each row. <br />
+          <br />
+          row number start from 0 and end at n-1 . n is number of the row.<br />
+          <br />
+          column number start from 0 end at m-1. m is number of the column for
+          each row.<br />
+          <br />
+
+          using this line you can easily access a each element of the matrix and
+          take element input from user. <br />
+          <br />
+
+          <code> cin&gt;&gt;twoDimensionalArr[i][j]; </code>
+        </p>
+        <strong><q>How to Print output of Each 2D Array element?</q></strong>
+        <p>
+          same above process but you just have to change cout instated of the
+          cin ony one change.
+        </p>
+
+        <strong><q>How 2D Array element store in memory?</q></strong>
+        <p>
+          2D array element are store at continuous memory location in memory.
+          <br />
+          <br />
+          it's use to method to store 2D array element
+        </p>
+        <ol>
+          <li>Row Major</li>
+          <li>Column Major</li>
+        </ol>
+        <p>
+          <strong>1 Row Major</strong>
+        </p>
+        <p>
+          Row Major : In row major each element of the 2d array are store in
+          memory row wise at continuous memory location.
+          <br />
+          <br />
+          for example :
+        </p>
+        <table style="border: 1px solid black">
+          <tr style="border: 1px solid black">
+            <td style="border: 1px solid black; padding: 18px">1</td>
+            <td style="border: 1px solid black; padding: 18px">2</td>
+            <td style="border: 1px solid black; padding: 18px">3</td>
+            <td style="border: 1px solid black; padding: 18px">4</td>
+            <td style="border: 1px solid black; padding: 18px">5</td>
+            <td style="border: 1px solid black; padding: 18px">6</td>
+            <td style="border: 1px solid black; padding: 18px">7</td>
+            <td style="border: 1px solid black; padding: 18px">8</td>
+            <td style="border: 1px solid black; padding: 18px">9</td>
+          </tr>
+        </table>
+        <strong>Memory location</strong>
+        <table style="border: 1px solid black">
+          <tr style="border: 1px solid black">
+            <td style="border: 1px solid black; padding: 10px">100</td>
+            <td style="border: 1px solid black; padding: 10px">104</td>
+            <td style="border: 1px solid black; padding: 10px">108</td>
+            <td style="border: 1px solid black; padding: 10px">112</td>
+            <td style="border: 1px solid black; padding: 10px">116</td>
+            <td style="border: 1px solid black; padding: 10px">120</td>
+            <td style="border: 1px solid black; padding: 10px">124</td>
+            <td style="border: 1px solid black; padding: 10px">128</td>
+            <td style="border: 1px solid black; padding: 10px">132</td>
+          </tr>
+        </table>
+
+        <p>
+          <strong>2 Column Major</strong>
+        </p>
+        <p>
+          Column Major : In row major each element of the 2d array are store in
+          memory Column wise at continuous memory location.
+          <br />
+          <br />
+          for example :
+        </p>
+        <table style="border: 1px solid black">
+          <tr style="border: 1px solid black">
+            <td style="border: 1px solid black; padding: 11px 18px">1</td>
+            <td style="border: 1px solid black; padding: 11px 18px">4</td>
+            <td style="border: 1px solid black; padding: 11px 18px">7</td>
+            <td style="border: 1px solid black; padding: 11px 18px">2</td>
+            <td style="border: 1px solid black; padding: 11px 18px">5</td>
+            <td style="border: 1px solid black; padding: 11px 18px">8</td>
+            <td style="border: 1px solid black; padding: 11px 18px">3</td>
+            <td style="border: 1px solid black; padding: 11px 18px">6</td>
+            <td style="border: 1px solid black; padding: 11px 18px">9</td>
+          </tr>
+        </table>
+        <strong>Memory location</strong>
+        <table style="border: 1px solid black">
+          <tr style="border: 1px solid black">
+            <td style="border: 1px solid black; padding: 10px">100</td>
+            <td style="border: 1px solid black; padding: 10px">104</td>
+            <td style="border: 1px solid black; padding: 10px">108</td>
+            <td style="border: 1px solid black; padding: 10px">112</td>
+            <td style="border: 1px solid black; padding: 10px">116</td>
+            <td style="border: 1px solid black; padding: 10px">120</td>
+            <td style="border: 1px solid black; padding: 10px">124</td>
+            <td style="border: 1px solid black; padding: 10px">128</td>
+            <td style="border: 1px solid black; padding: 10px">132</td>
+          </tr>
+        </table>
+        <br />
+        <br />
+        <strong><q>How 2D Array pass to function?</q></strong>
+        <p>
+          2D array name is row pointer. it's means array name is pointing to
+          first element of the each row. it's give second way of the accessing
+          2d array each element using row pointer and column index.
+        </p>
+        <p>you can easily verify it's with below code.</p>
+        <pre>
+            <code>
+                cout &lt;&lt(&twoDimensionalArr[0][0])&lt;&lt;" = "&lt;&lt;(*(twoDimensionalArr+ 0))&lt;&lt;endl;
+                cout&lt;&lt;*(&twoDimensionalArr[1][0])&lt;&lt;" = "&lt;&lt;(*(twoDimensionalArr + 1))&lt;&lt;endl;
+                cout&lt;&lt;(&twoDimensionalArr[2][0])&lt;&lt;" = "&lt;&lt;(*(twoDimensionalArr + 2))&lt;&lt;endl;
+
+                cout &lt;&lt;*(&twoDimensionalArr[0][0])&lt;&lt;" = "&lt;&lt;*(*(twoDimensionalArr+ 0))&lt;&lt;endl;
+                cout&lt;&lt;*(&twoDimensionalArr[1][0])&lt;&lt;" = "&lt;&lt;*(*(twoDimensionalArr + 1))&lt;&lt;endl;
+                cout&lt;&lt;*(&twoDimensionalArr[2][0])&lt;&lt;" = "&lt;&lt;*(*(twoDimensionalArr + 2))&lt;&lt;endl;
+            </code>
+            <output>
+                0xf7ef5ffd60 = 0xf7ef5ffd60
+                0xf7ef5ffd6c = 0xf7ef5ffd6c
+                0xf7ef5ffd78 = 0xf7ef5ffd78
+                1 = 1
+                4 = 4
+                7 = 7
+            </output>
+            </pre>
+            <p>
+                When you are passing 2d array to function then you are not passing entire 2D array you are just passing name of the 2D array which is row pointer so it's don't have how many column each row contain. so when you are passing a 2D Array to function then you always have to pass with is column size or column number m and row number n. 2D Array is pointer it's return you size of the pointer not entire size of the 2D array.
+            </p>
+            <pre>
+                <code>
+                    void printMatrix(int mat[][3], int n, int m)
+                    {
+                        cout &lt;&lt; endl;
+                        for (int i = 0; i&lt; n; i++)
+                        {
+                            for (int j = 0; j&lt; m; j++)
+                            {
+                                cout &lt;&lt; mat[i][j] &lt;&lt; " ";
+                            }
+                            cout &lt;&lt; endl;
+                        }
+                    }
+                </code>
+            </pre>
+        </pre>
+      </article>
+    </main>
+  </body>
+</html>
