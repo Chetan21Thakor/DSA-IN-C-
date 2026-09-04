@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 15 : Chapter : Vector</title>
+    <style>
+      table,
+      tbody,
+      tr,
+      td,
+      tfoot {
+        border: 1px solid black;
+      }
+      table {
+        width: 250px;
+      }
+      tbody > tr {
+        height: 100px;
+        text-align: top;
+      }
+      tbody > tr > td {
+        display: flex;
+        height: 100px;
+      }
+      .stack_memory {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Vector</h1>
+    </header>
+    <main>
+      <article>
+        <div class="content">
+          <header>
+            <h3>New Operator</h3>
+          </header>
+          <strong
+            ><q>What is New Operator and why we need a New Operator?</q></strong
+          >
+          <pre>
+                <code>
+                    //* normal arr 
+
+                    int arr[100]={1,2,3,4,5};
+                </code>
+            </pre>
+          <p>
+            This line tell to a compiler create 100 size array in memory which
+            can store 100 integer value. <br />
+            <br />
+            This Array size is allocated at compile time. It's size is fix you
+            can't can change it's size after declaration of the Array. <br />
+            <br />
+            When you are want to give dynamic size to array at run time then you
+            have to use a New Operator.
+            <br /><br />
+            New Operator assign a new memory to any data structure. It's used to
+            assign new memory to any variable or any data structure.
+          </p>
+          <pre>
+                <code>
+                    int n;
+                    cin>>n;
+
+                    int * arr=new int [n];
+                </code>
+            </pre>
+          <p>
+            First line : tell to compiler take 4 byte of space in memory to
+            store a integer value give name to size to it's memory location.
+            <br />
+            <br />
+            Second line : take size input from user at run time of the Program.
+            <br />
+            <br />
+            Third Line : tell to compiler assign a n size new memory to integer
+            Array and store it's memory location in normal integer pointer.
+            <br />
+            <br />
+            We very well know that Array name is pointer just because of that
+            this normal pointer behave like array pointer. <br />
+            <br />
+            you can access it's just like normal array index and also using a
+            pointer arithmetic.
+          </p>
+          <pre>
+                <code>
+                    int n;
+                    cin>>n;
+
+                    int * arr=new int [n];
+
+                    arr[0]=1;
+                    arr[1]=2;
+                    arr[2]=3;
+
+                    cout&lt; &lt;*(arr +0)&lt; &lt;" ";
+                    cout&lt; &lt;*(arr +1)&lt; &lt;" ";
+                    cout&lt; &lt;*(arr +2)&lt; &lt;" ";
+
+                    cout&lt; &lt;arr[0]&lt; &lt;" ";
+                    cout&lt; &lt;arr[1]&lt; &lt;" ";
+                    cout&lt; &lt;arr[2]&lt; &lt;" ";
+                </code>
+            </pre>
+        </div>
+      </article>
+      <article>
+        <div class="content">
+          <header>
+            <h3>Static Memory Allocation</h3>
+          </header>
+          <strong
+            ><q>How many Memory Allocation have in Computer memory.</q></strong
+          >
+          <p>There are two type of memory allocation we have in memory.</p>
+          <ol>
+            <li>Static Memory Allocation</li>
+            <li>Dynamic Memory Allocation</li>
+          </ol>
+          <strong>1. Static Memory Allocation</strong>
+
+          <pre>
+                <code>
+                    int arr[100]={1,2,3,4,5};
+                </code>
+            </pre>
+          <p>
+            when we are creating Array using a normal way or creating a normal
+            array then it's memory all allocation done at compile. <br />
+            <br />
+            At Compile time Compiler very well know how many memory space
+            require to store this normal array in memory. Compiler assign
+            require memory space at compile to this array. IT's Called "Static
+            Memory Allocation."<br />
+            <br />
+          </p>
+          <ol>
+            <li>Static Memory Allocation done at Compile time.</li>
+            <li>
+              Static Memory Allocation done in Stack memory on Stack frame of
+              the function where Array is created.
+            </li>
+          </ol>
+          <p>
+            If Array created in <code> main()</code> function then what happen
+            in stack memory.
+          </p>
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  Main ()<br />
+                  <br />
+                  Array[size]
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td
+                  style="
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: larger;
+                    font-weight: bold;
+                  "
+                >
+                  Stack Memory
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+          <p>Stack memory looks like above.</p>
+          <p>
+            If Array created in any other<code>fun()</code> function then what
+            happen in stack memory.
+          </p>
+          <div class="stack_memory">
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    fun()
+                    <br />
+                    <br />
+                    Array[size]
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Main() { <br />
+                    <br />
+                    &nbsp; &nbsp; &nbsp; fun(); <br />
+                    <br />
+                    }
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td
+                    style="
+                      height: 50px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      font-size: larger;
+                      font-weight: bold;
+                    "
+                  >
+                    Stack Memory
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+            <div>
+              <p>
+                <strong
+                  >Stack Frame After function execution is completed.when return
+                  control to <code>main()</code></strong
+                >
+              </p>
+            </div>
+            <div>
+              <table>
+                <tbody>
+                  <tr>
+                    <td>
+                      Main ()<br />
+                      <br />
+                      fun(); <br />
+                      <br />
+                      &nbsp;&nbsp;//*control on next line
+                    </td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td
+                      style="
+                        height: 50px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: larger;
+                        font-weight: bold;
+                      "
+                    >
+                      Stack Memory
+                    </td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+          <p>
+            When function is executed successfully end return it's control back
+            to main function() again then function stack frame is deleted from a
+            stack means array also deleted from a memory. <br />
+            <br />
+            <code> main()</code> function can't access this array which created
+            in function stack frame.
+          </p>
+          <p><strong>Static Memory Allocation</strong></p>
+          <ul>
+            <li>Static memory allocation done at compile time.</li>
+            <li>it's done in stack memory</li>
+            <li>
+              it'a automatically free when the function execution is completed.
+            </li>
+          </ul>
+        </div>
+      </article>
+      <article>
+        <div class="content">
+          <header>
+            <h3>Dynamic Memory Allocation</h3>
+          </header>
+          <pre>
+            <code>
+              int *arr=new int[n];
+            </code>
+          </pre>
+          <p>
+            Dynamic Memory Allocation done at compile time Dynamically. <br />
+            Dynamically means changeable or variable type. it's size can be
+            change at run time of the program.
+          </p>
+          <p>
+            Dynamic Memory Allocation done in Heap Memory. <br />
+            To allocate a heap memory to any variable or any data structure you
+            have to use a new Operator.
+          </p>
+          <p>
+            Dynamic Memory allocated memory not free automatically you have to
+            explicitly delete or remove using delete Operator or keyword.
+          </p>
+          <pre>
+            <code>
+              delete []arr;
+            </code>
+          </pre>
+          <p>
+            After the c++ entire file execution was completed stack and heap
+            both memory automatically delete from RAM.
+          </p>
+          <strong><q>What is Memory Leak ?</q></strong>
+          <p>
+            A Programer allocate a heap memory to any variable or any data
+            structure and forgot to delete then heap memory remain as it is in
+            memory any other variable or data structure can't can use it's just
+            because of it's already filled by another data.It's called "Memory
+            Leak."
+          </p>
+          <strong><q>What happen in memory Behind scene?</q></strong>
+          <p>
+            When we are creating 1D Dynamic array then it's created in heap
+            memory. we are storing it's memory address in normal pointer which
+            is created in main () function which pointe a array which created in
+            Heap memory.
+            <br />
+            <br />
+            When the execution of the <code>main()</code> function is completed
+            then it's stack frame delete from a stack memory and also pointer
+            which a Array which created in heap memory it's remain as it is in
+            heap memory it's automatically delete from heap memory . you have to
+            delete it using delete keyword.
+          </p>
+        </div>
+      </article>
+      <article>
+        <div class="content">
+          <header>
+            <h4>2D Dynamic Array</h4>
+          </header>
+          <strong
+            >How to create , How to take input and so output in 2D
+            Dynamic?</strong
+          >
+          <pre>
+            <code>
+              //*  How create DYnamic 2D Array
+              
+              int rows = 0, column = 0;
+              cout &lt;&lt; "Enter Number of rows : " &lt;&lt; endl;
+               cin &gt;&gt; rows;
+               
+               cout &lt;&lt; "Enter Number of  Column : " &lt;&lt; endl;
+                cin &gt;&gt; column;
+
+                int * *matrix = new int *[rows];
+
+                for (int i = 0; i &lt; rows; i++)
+                {
+                  matrix[i] = new int[column];
+                }
+                cout &lt;&lt; "Enter the element of 2D Dynamic Array : " &lt;&lt; endl;
+                // * take input DYnamic 2D Array
+
+                for (int i = 0; i &lt; rows; i++)
+                {
+                    for (int j = 0; j &lt; column; j++)
+                    {
+                        cin &gt;&gt; matrix[i][j];
+                    }
+                }
+
+                cout &lt;&lt; "Output of 2D Dynamic Array : " &lt;&lt; endl;
+
+                //* Output DYnamic 2D Array
+                for (int i = 0; i &lt; rows; i++)
+                {
+                    for (int j = 0; j &lt; column; j++)
+                    {
+                        cout &lt;&lt; matrix[i][j] &lt;&lt; " ";
+                    }
+                    cout &lt;&lt; endl;
+                }
+            </code>
+          </pre>
+          <p>
+            To create a 2d dynamic array we have to follow two step <br />
+            <br />
+            1.create a pointer of the 1D array each pointer pointe to rows of
+            the matrix. <br />
+            <br />
+            2.for each row we have to define a m number of column. <br />
+            <br />
+            above code written.
+          </p>
+          <strong><q>How Exactly 2D Dynamic Array Looks in memory.</q></strong>
+          <div>
+            <!-- TODO Add img of 2d  Dynamic Array  in memory-->
+          </div>
+        </div>
+      </article>
+
+      <article>
+        <div class="content">
+          <header>
+            <h4>Vector</h4>
+          </header>
+          <strong
+            >How to create , How to take input and so output in Vector ?</strong
+          >
+          <p>
+            <dfn
+              >Vector is Just like a Dynamic 1D Array.Vector Size can change
+              Dynamically at runtime. Vector is object of the Vector class which
+              already define in side a STL.</dfn
+            >
+            <br />
+            <br />
+            Vector store element at continuos memory just like array. <br />
+            <br />
+          </p>
+          <p>
+            <strong>creating Vector</strong> <br />
+            <br />
+            there are three way to create a Vector.
+          </p>
+          <pre>
+            <code>
+              vector&lt;int&gt; vec; //This line tell to compiler create a empty vector.which size and capacity both are 0.
+              vector&lt;int&gt;vec1={1,2,3,4}; //create a vector and initialize it's with 1 ,2,3,4. it's size and capacity both are 4.
+              vector&lt;int&gt;vec1(5,0);//This creation of the vector using vector Construction method or function. this line tell to compiler create a vector of 5 size and at all index position store a 0. it's size and capacity both are 5.
+            </code>
+          </pre>
+          <p>
+            <strong>Taking input & Output in vector</strong>.just like array we
+            can take input & output vector element using index value
+          </p>
+          <pre>
+            <code>
+              int size;
+              cout&lt;&lt;"enter Size of the Vector : "&lt;&lt;endl;
+              cin&gt;&gt;size;
+
+              vector&lt;int&gt;vec(size);
+
+              cout&lt;&lt;"Enter the element of the vector : "&lt;&lt;endl;
+
+              for(int i =0; i&lt;vec.size();i++){
+                  cin&gt;&gt;vec[i];
+              }
+
+              cout&lt;&lt;"\nelement of the vector : "&lt;&lt;endl;
+
+              for(int i =0; i&lt;vec.size();i++){
+                  cout&lt;&lt;vec[i]&lt;&lt;" ";
+              }
+            </code>
+          </pre>
+        </div>
+      </article>
+      <article>
+        <div class="content">
+          <header>
+            <h4>Vector Implementation in Memory</h4>
+          </header>
+          <p>
+            When we are create a vector that time vector size and capacity both
+            are same. <br />
+            <br />
+            Size = Number element available in vector. <br />
+            <br />
+            capacity = Maximum Number of Element that vector can store. <br />
+            <br />
+            if the size is reached out capacity of the vector then double size
+            new vector created in memory and all element of the old vector are
+            copy in this new vector and old vector deleted from memory.
+          </p>
+        </div>
+      </article>
+      <article>
+        <div class="content">
+          <header>
+            <h4>2D vector Vector</h4>
+          </header>
+          <strong><q>how to create 2d Vector?</q></strong>
+          <pre>
+            <code>
+              vector&lt;vector&lt;int&gt;&gt; matrix = {{1, 2, 3}, {4, 5}, {6}};
+            </code>
+          </pre>
+          <p>
+            no need to define it's column and row of the 2d vector. <br />
+            <br />number of column in 2d vector can variable.
+          </p>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
