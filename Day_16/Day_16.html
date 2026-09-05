@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 16 : Chapter 15: Bit Manipulation</title>
+    <style>
+      table,
+      tbody,
+      thead,
+      th,
+      tr,
+      td {
+        border: 1px solid black;
+        text-align: center;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Chapter 15: Bit Manipulation</h1>
+    </header>
+    <main>
+      <article>
+        <div class="content">
+          <header>
+            <h3>Bit Wise Operator</h3>
+          </header>
+          <p>
+            All the bitwise Operator work on binary number. <br />
+            <br />So it's convert a normal decimal number into binary number
+            first then it's perform it's operation. <br />
+            <br />
+            Bitwise Operator it's work on binary number only.
+          </p>
+          <p><strong>List of the Bit wise Operator</strong></p>
+          <ol>
+            <li>Bit wise AND (&)</li>
+            <li>Bit wise OR (|)</li>
+            <li>Bit wise XOR (^)</li>
+            <li>Bit wise NOT (~)</li>
+            <li>Bit wise LEFT SHIFT (&lt;&lt;)</li>
+            <li>Bit wise RIGHT SHIFT (&gt; &gt;)</li>
+          </ol>
+          <p><strong>Bit wise AND (&) Logic Table</strong></p>
+          <p>
+            it's return 1 when only when the both bit are 1. otherwise return 0.
+          </p>
+          <table>
+            <thead>
+              <th>inp 1</th>
+              <th>inp 2</th>
+              <th>output</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+          <p><strong>Bit wise OR (|) Logic Table</strong></p>
+          <p>
+            it's return 0 when only when the both bit are 0. otherwise return 1.
+          </p>
+          <table>
+            <thead>
+              <th>inp 1</th>
+              <th>inp 2</th>
+              <th>output</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+          <p><strong>Bit wise XOR (^) Logic Table</strong></p>
+          <p>
+            it's return 0 when only when the both bit are 0 or both bit are 1.
+            otherwise return 1.
+          </p>
+          <table>
+            <thead>
+              <th>inp 1</th>
+              <th>inp 2</th>
+              <th>output</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+          <p><strong>Bit wise NOT (~) Logic Table</strong></p>
+          <p>
+            it's return 0 when bit is 1 and it's return 1 when bit is 0. it's
+            used to toggle a bit 1 to 0 and 0 to 1.
+          </p>
+          <table>
+            <thead>
+              <th>inp</th>
+              <th>output</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>1</td>
+              </tr>
+            </tbody>
+          </table>
+          <p><strong>Bit wise LEFT SHIFT (&lt;&lt;)</strong></p>
+          <p>
+            It's used to shift a bit left side by n times. <br />
+            <br />
+            for example <br />
+            <br />
+            5 &lt;&lt; 2 then <br />
+            <br />
+            (5) <sub>10</sub> =(101) <sub>2</sub> <br />
+            <br />
+            (101) <sub>2</sub> left shift two times means shift last bit left
+            two time. <br />
+            <br />
+            IN first time left shift (101) <sub>2</sub> become (1010)
+            <sub>2</sub>. <br />
+            <br />
+            IN second time left shift (1010) <sub>2</sub> become (10100)
+            <sub>2</sub>. <br />
+            <br />
+            so ans is : (20) <sub>10</sub>
+          </p>
+          <p><strong>Bit wise RIGHT SHIFT (&gt;&gt;)</strong></p>
+          <p>
+            It's used to shift a bit right side by n times. <br />
+            <br />
+            for example <br />
+            <br />
+            5 &gt;&gt; 2 &nbsp;&nbsp;then <br />
+            <br />
+            (5) <sub>10</sub> =(101) <sub>2</sub> <br />
+            <br />
+            (101) <sub>2</sub> right shift two times means shift last bit right
+            two time. <br />
+            <br />
+            IN first time right shift (101) <sub>2</sub> become (10)
+            <sub>2</sub>. <br />
+            <br />
+            IN second time right shift (1010) <sub>2</sub> become (1)
+            <sub>2</sub>. <br />
+            <br />
+            so ans is : (1) <sub>10</sub>
+          </p>
+          <p><strong>ALl  Bit wise Operator Operator</strong></p>
+          <pre>
+            <code>
+                int a = 13; //* (13)=(00001101)
+                int b = 25; //* (25)=(00011001)
+
+                cout &lt;&lt; a &lt;&lt; " & " &lt;&lt; b &lt;&lt; " = " &lt;&lt; (a & b) &lt;&lt; endl;   //* Ans :(01001) ==&gt; 9
+                cout &lt;&lt; a &lt;&lt; " | " &lt;&lt; b &lt;&lt; " = " &lt;&lt; (a | b) &lt;&lt; endl;   //* Ans :(11101) ==&gt;29
+                cout &lt;&lt; a &lt;&lt; " ^ " &lt;&lt; b &lt;&lt; " = " &lt;&lt; (a ^ b) &lt;&lt; endl;   //* Ans :(10100) ==&gt;20
+                cout &lt;&lt; a &lt;&lt; " &lt;&lt; " &lt;&lt; b &lt;&lt; " = " &lt;&lt; (a &lt;&lt; 2) &lt;&lt; endl; //* Ans :(110100) ==&gt;52
+                cout &lt;&lt; a &lt;&lt; "&gt;&gt; " &lt;&lt; b &lt;&lt; " = " &lt;&lt; (b&gt;&gt; 2) &lt;&lt; endl; //* Ans :(110) ==&gt;6
+                cout &lt;&lt; a &lt;&lt; " ~ " &lt;&lt; b &lt;&lt; " = " &lt;&lt; (~a) &lt;&lt; endl;      //* Ans :-14
+            </code>
+          </pre>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
