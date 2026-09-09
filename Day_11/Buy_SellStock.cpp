@@ -26,7 +26,7 @@ int buy_Sell_Stock(int prices[], int n)
 int main()
 {
 
-    int prices[] = {7, 1, 3, 5, 6, 4};
+    int prices[] = {7, 3, 2, 1};
     int n = sizeof(prices) / sizeof(int);
 
     cout << buy_Sell_Stock(prices, n);

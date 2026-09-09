@@ -1,23 +1,31 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 vector<int> pairSum(vector<int> vec, int target)
 {
+   vector<pair<int, int>> arr;
 
-    int st = 0, end = vec.size() - 1, currSum = 0;
-    vector<int> pair;
+    for (int i = 0; i < vec.size(); i++)
+    {
+        arr.push_back({vec[i], i});
+    }
+
+    sort(arr.begin(), arr.end());
+
+    int st = 0;
+    int end = arr.size() - 1;
 
     while (st < end)
     {
-        currSum=vec[st] +vec[end];
+        int sum = arr[st].first + arr[end].first;
 
-        if (currSum == target)
+        if (sum == target)
         {
-            vector<int> pair = {st, end};
-            return pair;
+            return {arr[st].second, arr[end].second};
         }
-        else if (currSum > target)
+        else if (sum > target)
         {
             end--;
         }
@@ -26,34 +34,25 @@ vector<int> pairSum(vector<int> vec, int target)
             st++;
         }
     }
-    return pair;
+
+    return {};
 }
 
 int main()
 {
-    vector<int> vec = {2, 7, 11, 15};
+    vector<int> vec = {3, 2, 4};
+    int targetSum = 6;
 
-    int targetSum = 13;
+    vector<int> vec1 = pairSum(vec, targetSum);
 
+    if (vec1.size() == 2)
+    {
+        cout << "Pair is: [" << vec1[0] << ", " << vec1[1] << "]" << endl;
+    }
+    else
+    {
+        cout << "No pair found!" << endl;
+    }
 
-    // for (int i = 0; i < 4; i++)
-    // {
-    //     for (int j = i + 1; j < 4; j++)
-    //     {
-    //         for (int k = i; k < j; k++)
-    //         {
-    //             int currSum = vec[k] + vec[j];
-
-    //             if (currSum == sum)
-    //             {
-    //                 cout << "Pair is :" << "(" << i << "," << j << ")" << endl;
-    //                 break;
-    //             }
-    //         }
-    //     }
-    // }
-
-     vector<int> vec1= pairSum(vec,targetSum);
-
-     cout<<"Pair is : "<<vec1[0]<<","<<vec1[1]<<endl;
+    return 0;
 }
