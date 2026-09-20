@@ -1,0 +1,719 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 17 : Chapter : Class and Object</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Class and Object</h1>
+      </header>
+      <article>
+        <div class="content">
+          <strong><q>Why we Need Classes and Object</q></strong>
+          <p>
+            When we want represent any real world Entity or Real World Object in
+            Program that time we need a Classes and Object to represent it.
+            <br />
+            <br />
+            for example i need to represent a Book in program then i have to
+            create class Book Which provide a blueprint of the Book and Object
+            of the class it's represent the actual book.
+          </p>
+          <strong><q>What is Classes and Object</q></strong>
+          <p>
+            Class is Blueprint of the Object or Class is a Group of the Objects.
+            <br />
+            <br />
+            for Example <br />
+            <br />
+            Class House is a Blueprint of the House which define How many room
+            in House , What is the color of the House, How many Bad Rooms in
+            House the , then where leaving room. it's just define how are Object
+            look and How many property means what object can know and What
+            Object can do.
+            <br />
+            <br />
+            It's Not Real House it's Just Blueprint of the House which define
+            how Our House are look and how it's designed to represent actual
+            House. Using this Blueprint you can create multiple Object.
+            <br />
+            <br />
+            <strong>Object</strong>
+            A Object is Instance of the Class or it's represent Actual Data of
+            the Real World Object or Entity.
+            <br />
+            <br />
+            Class is Blueprint and Object it's Actual Entity which store the
+            Data of the Real World Entity. It's represent only one individual
+            Entity of the class.
+          </p>
+          <strong><q>How to define Classes and Object?</q></strong>
+          <pre>
+            <code>
+                #include &lt;iostream&gt;
+                using namespace std;
+
+                class User
+                {
+                private:
+                    int id;
+                    string password;
+
+                public:
+                    string userName;
+                    int follower;
+                    int following;
+                    string bio;
+
+                    User(string userName, int follower, int following, string bio)
+                    {
+                        this->userName = userName;
+                        this->follower = follower;
+                        this->following = following;
+                        this->bio = bio;
+                    }
+                    void info()
+                    {
+                        cout &lt;&lt; "User ID is : " &lt;&lt; this->id &lt;&lt; endl;
+                        cout &lt;&lt; "User Name is : " &lt;&lt; this->userName &lt;&lt; endl;
+                        cout &lt;&lt; "User password is : " &lt;&lt; this->password &lt;&lt; endl;
+                        cout &lt;&lt; "User follower is : " &lt;&lt; this->follower &lt;&lt; endl;
+                        cout &lt;&lt; "User following is : " &lt;&lt; this->following &lt;&lt; endl;
+                        cout &lt;&lt; "User bio is : " &lt;&lt; this->bio &lt;&lt; endl;
+                    }
+                    // Getters
+
+                    int getId()
+                    {
+                        return this->id;
+                    }
+
+                    string getPassword()
+                    {
+                        return this->password;
+                    }
+
+                    // Setters
+
+                    void setId(int id)
+                    {
+                        this->id=id;
+                    }
+
+                    void setPassword(string password)
+                    {
+                        this->password=password;
+                    }
+                };
+
+                int main()
+                {
+                    User chetan("@Chetan21Thakor",211,20,"Stay Happy.");
+                    chetan.setPassword("Charvi@122");
+                    chetan.setId(2002);
+
+                    cout &lt;&lt; chetan.getId() &lt;&lt; endl;
+                    cout &lt;&lt; chetan.userName &lt;&lt; endl;
+                    cout &lt;&lt; chetan.getPassword() &lt;&lt; endl;
+                    cout &lt;&lt; chetan.bio &lt;&lt; endl;
+                    cout &lt;&lt; chetan.follower &lt;&lt; endl;
+                    cout &lt;&lt; chetan.following &lt;&lt; endl;
+
+                    chetan.info();
+                    return 0;
+                }
+            </code>
+          </pre>
+        </div>
+      </article>
+      <article>
+        <div class="content">
+          <header>
+            <h3>Access Modifier</h3>
+          </header>
+          <strong><q>What is the Access Modifier?</q></strong>
+          <p>
+            Access Modifier are Keyword Which define a Which property and method
+            of class is Accessible inside class only and Which property and
+            method of the class can Accessible within class and outside a class.
+            which property and method of the class is accessible within class
+            and it's child class.
+            <br />
+            <br />
+            It's Provide Control Access on the Class Property and Method to it's
+            Object. Where it's accessible where not.
+          </p>
+          <p><strong>There are Three Access Modifier.</strong></p>
+          <ol>
+            <li>Private Access Modifier</li>
+            : A Property and Method which declare as Private it's only
+            accessible within class only and it's friend Function and it's
+            friend class.
+            <br />
+            <br />
+            <li>Public Access Modifier</li>
+            : A Property and Method which declare as Public it's accessible
+            within class and anywhere in Program using it's Object.
+            <br />
+            <br />
+            <li>Protected Access Modifier</li>
+            : A Property and Method which declare as Protected it's only
+            accessible within class only and it's derived class.
+            <br />
+          </ol>
+        </div>
+      </article>
+      <article>
+        <div class="content">
+          <h3>Getters and Setters Method</h3>
+        </div>
+        <strong
+          ><q>What is Getters and Setters Method and Why Need it?</q></strong
+        >
+        <p>
+          A Property of the class which contain sensitive data so that we don't
+          want to give it's direct access outside a class to any Function of
+          another class that Property we Make it Private. <br />
+          <br />
+          We very well no Private Property of the class it's not accessible
+          outside so How we can get it's value and How We can set it's value to
+          solve this problem we need Setters and Getters Method. <br />
+          Setters and Getters are special type of the method of the class which
+          provide as indirect access of the private Property and method of the
+          class.
+          <br />
+          <br />
+
+          Getters method it's for Get value of the Private Property . <br />
+          <br />
+          Setters method it's for Set the value of the Private property.
+        </p>
+        <strong><q>What is Property and Method?</q></strong>
+        <p>
+          <strong>Property</strong>: Is a variable which is define inside a
+          class it's called Property , Attribute, and Data member.
+        </p>
+        <p>
+          <strong>Method</strong>: Is a Function which is define inside a class
+          it's called Method , Behavior, and Member Function.
+        </p>
+      </article>
+      <article>
+        <div class="contetn">
+          <header>
+            <h3>Encapsulation</h3>
+          </header>
+          <strong><q>What is Encapsulation and Why We need it?</q></strong>
+          <p>
+            <strong>Encapsulation</strong> is Warping of the Data Member and
+            Member Function in One Single Unit called Class. <br />
+            It's used for Data Hiding.
+            <br />
+            TO Creating class and define it's Property and Method within in
+            class it's Encapsulation. some property of the class we make it
+            Private which not accessible outside of the class it's called "Data
+            Hiding".
+          </p>
+        </div>
+      </article>
+      <article>
+        <div class="contetn">
+          <header>
+            <h3>Constructor Method</h3>
+          </header>
+          <strong><q>What is Constructor Method and Why We need it?</q></strong>
+          <p>
+            <strong>Constructor Method</strong> is special type of the Method.
+          </p>
+
+          <ul>
+            <li>It's Has Same name as Class Name</li>
+            <li>It's Not has it's return type.</li>
+            <li>It's Automatically called when Object of the class Created.</li>
+            <li>
+              Constructor Method is used to Initialize the Object of the class
+              or for memory allocation of the object.
+            </li>
+            <li>
+              When we are not create Our Own Custom Constructor then Compiler
+              create it's own Constructor to memory allocation of the object and
+              initialize a object . Compiler always create non - parameterize
+              Constructor.
+            </li>
+          </ul>
+          <p>There Are Three Type OF the Constructor.</p>
+          <ol>
+            <li>Non-Parameterized Constructor</li>
+            : A Constructor which is Automatically Created by a Compiler it's
+            non-parameterized Constructor.A Constructor not have any parameter
+            it's called "non- Parameterized Constructor".
+            <br />
+            <br />
+            <li>Parameterized Constructor</li>
+            :A Constructor which is Manually Created by a Programer to
+            initialize Object with some value that time parameterized
+            Constructor Created by a Programer with some parameter it's called
+            "Parameterized Constructor".
+            <br />
+            <br />
+            <li>Copy Constructor</li>
+            :When we want to copy one object properties into another object then
+            copy Constructor is used. It's Just copy the one object value of the
+            properties into another object.
+            <br />
+            IF we not create own copy Constructor for class then Compiler
+            Automatically Create copy Constructor.
+            <br />
+          </ol>
+        </div>
+      </article>
+      <article>
+        <div class="content">
+          <h3>Shallow Copy and Deep Copy of the Object</h3>
+
+          <strong
+            ><q>What is Shallow Copy and Deep Copy of the Object?</q></strong
+          >
+          <p>
+            When we trying to copy one object into another object then if Custom
+            copy Constructor Created by Programer then Compiler call that copy
+            Constructor if we not create any copy Constructor then Compiler
+            Automatically create copy Constructor and call that copy
+            Constructor.
+            <br />
+            <br />
+            Default Copy Constructor create a Shallow copy of the Original
+            Object or Source Object into destination object.
+            <br />
+            <br /><strong>Shallow Copy </strong> Means If the Class any property
+            has dynamically memory allocation that time if we are trying to copy
+            one source object into another destination object them destination
+            object easily copy that static property without any issue but when
+            it's try to copy dynamically allocated property then it's just copy
+            the same memory address which store inside source object property
+            means both are pointing same memory address in heap. so that if we
+            make changes in one object dynamically allocated property then it's
+            changes reflect into another object It's Called "Shallow copy of the
+            Object." <br />
+            <br />
+            Default Copy Constructor always create a Shallow copy of the Object
+            so that we have to create our own Copy Constructor which can Create
+            a Deep Copy of the Object.
+          </p>
+          <p>
+            <strong>Deep Copy of the Object</strong> to create a Deep copy of
+            the Object we create our own copy Constructor which can create deep
+            copy of the Object. <br />
+            <br />
+            <strong>Deep Copy</strong> Means If any property of the class has
+            dynamically memory allocation then source object and destination
+            object which copy the properties of the source object both are
+            pointe a different memory location in heap but store same value.
+          </p>
+          <pre>
+          <code>
+            #include &lt;iostream&gt;
+            using namespace std;
+
+            class Car
+            {
+            public:
+                string name;
+                string color;
+                int *milage;
+
+                Car(string name, string color)
+                {
+                    this->name = name;
+                    this->color = color;
+                    this->milage = new int;
+                    *milage = 12;
+                }
+
+                //Shallow Copy
+                Car(Car &source)
+                {
+                    this->name = source.name;
+                    this->color = source.color;
+                    (this->milage) = (source.milage);
+                } 
+
+                //Deep Copy
+                Car(Car &source)
+                {
+                    this->name = source.name;
+                    this->color = source.color;
+                    this->milage = new int;
+                    *(this->milage) = *(source.milage);
+                }
+            };
+
+            int main()
+            {
+                Car c1("BMW", "black");
+                Car c2(c1);
+
+                cout &lt;&lt; c2.name &lt;&lt; endl;
+                cout &lt;&lt; c2.color &lt;&lt; endl;
+                cout &lt;&lt; *(c2.milage) &lt;&lt; endl;
+
+                *c2.milage = 10;
+                cout &lt;&lt; *(c2.milage) &lt;&lt; " != ";
+                cout &lt;&lt; *(c1.milage) &lt;&lt; endl;
+
+                return 0;
+            }
+          </code>
+        </pre>
+        </div>
+      </article>
+      <article>
+        <div class="content">
+          <header>
+            <h4>Destructor Method</h4>
+          </header>
+          <strong
+            ><q
+              >What is Destructor Method? and way we Need a Destructor
+              Method?</q
+            ></strong
+          >
+          <p>Destructor Method is special type of Method of the class.</p>
+          <ul>
+            <li>
+              Destructor method has same name as class name but it's name start
+              with tilt Symbol.
+            </li>
+            <li>Destructor method has not it's return type.</li>
+            <li>
+              Destructor method has it's Automatically called when main()
+              Function scope is end or when the main() Function execution
+              complete successfully or exact before a return statement of the
+              main() Function.
+            </li>
+            <li>
+              Constructor is for memory allocation and initialize object and
+              Destructor is for exact opposite task .Destructor is for Memory
+              deallocation and destroy a object free a memory.
+            </li>
+            <li>
+              If We are not create Destructor then Compiler create it's own
+              Destructor for destroy a object.
+            </li>
+          </ul>
+          <p>
+            Most of the time we are not create Destructor but when the any
+            property of the class has dynamical memory allocation that time to
+            free that memory or solve memory leak problem we create Custom
+            Destructor.
+          </p>
+          <p><strong>Destructor In Code</strong></p>
+          <pre>
+            <code>
+              #include &lt;iostream&gt;
+              using namespace std;
+
+              class Car
+              {
+              private:
+                  string name;
+                  int *milage;
+                  string color;
+
+              public:
+                  Car(string name, string color)
+                  {
+                      cout &lt;&lt; "HI from constructor" &lt;&lt; endl;
+                      this->name = name;
+                      this->color = color;
+                      this->milage = new int;
+                      *(milage) = 12;
+                  }
+
+                  Car(Car &c)
+                  {
+                      cout &lt;&lt; "HI from Copy constructor" &lt;&lt; endl;
+                      this->name=c.name;
+                      this->color=c.color;
+                      this->milage=new int;
+                      *(milage)=*(c.milage);
+                  }
+
+                  void info()
+                  {
+                      cout &lt;&lt; this->name &lt;&lt; endl;
+                      cout &lt;&lt; this->color &lt;&lt; endl;
+                      cout &lt;&lt; *(milage) &lt;&lt; endl;
+                  }
+
+                  ~Car()
+                  {
+                      // cout &lt;&lt; "Destructor is special type of the function it's called automatically when the main function execution complete successfully. when main() function scope finished." &lt;&lt; endl;
+                      // cout &lt;&lt; "Destructor has same name as class name with ~ as prefix." &lt;&lt; endl;
+                      // cout &lt;&lt; "Destructor not have it's return type." &lt;&lt; endl;
+                      // cout &lt;&lt; "Destructor it's called only for once at deallocation of  the memory of the object." &lt;&lt; endl;
+                      // cout&lt;&lt; "Destructor for the cleaning purpose of the memory uses after the object go out of the scope."&lt;&lt;endl;
+                      // cout &lt;&lt; "if we not create any Destructor then compiler create it's own destructor for clean static memory only not clean dynamic memory allocation" &lt;&lt; endl;
+                      // cout &lt;&lt; "To deallocate Dynamically allocate memory we have to create our own destructor." &lt;&lt; endl;
+
+                      cout &lt;&lt; "Destructor called when main function scope is end." &lt;&lt; endl;
+
+                      if (milage != NULL)
+                      {
+                          delete milage;
+                          milage = NULL;
+                      }
+                  }
+
+                  // Getters
+
+                  string getName()
+                  {
+                      return this->name;
+                  }
+
+                  string getColor()
+                  {
+                      return this->color;
+                  }
+
+                  int getMilage()
+                  {
+                      return *(milage);
+                  }
+
+                  // Setters
+
+                  void setName(string name)
+                  {
+                      this->name = name;
+                  }
+
+                  void setColor(string color)
+                  {
+                      this->color = color;
+                  }
+
+                  void setMilage(int mil)
+                  {
+                      *(milage) = mil;
+                  }
+              };
+
+              int main()
+              {
+
+                  Car c1("maruti 800", "black");
+                  // c1.info();
+                  Car c2("BMW", "red");
+                  Car c3("BMW", "Green");
+                  Car c4("BMW", "Golden");
+                  Car c5("BMW", "Silver");
+                  Car c6 = c1;
+                  c6.setMilage(10);
+                  cout &lt;&lt; c1.getMilage() &lt;&lt; endl;
+                  cout &lt;&lt; c6.getMilage() &lt;&lt; endl;
+                  return 0;
+              }
+            </code>
+          </pre>
+        </div>
+      </article>
+      <article>
+        <div class="content">
+          <header>
+            <h4>Inheritance In Class</h4>
+          </header>
+          <p>
+            <strong>What is Inheritance and Why we need Inheritance?</strong>
+          </p>
+          <p>
+            Inheritance is concept in which we are inherit properties or methods
+            of the one class to another class. <br />
+            <br />
+            A class which inherit or giving access of it's properties and
+            methods it's class called "Parent Class" or "Super Class" or "Base
+            Class". <br />
+            <br />
+            A class which inheriting or taking access of another class
+            properties and methods it's class called "Child Class" or "Sub
+            Class" or "Derived Class".
+          </p>
+          <p><strong>Types Of The Inheritance</strong></p>
+          <ol>
+            <li>Single Inheritance</li>
+            :In Single Inheritance only one parent class and only one child.
+            <li>multi level Inheritance</li>
+            :In multi level Inheritance only one parent class and only one child
+            but level by level it's inherit one class property to another class
+            in multi level it's called "multi level Inheritance".
+            <li>multiple Inheritance</li>
+            :A Child class inheriting properties and methods of the multiple
+            parent classes it's called "multiple Inheritance".One child class
+            and more then one parent or base class.
+            <li>Hybrid or Hairarchical Inheritance</li>
+            : it's Combination of the above all type of the Inheritance it's can
+            contain Single Inheritance or multi level Inheritance or multiple
+            Inheritance in any order.
+          </ol>
+
+          <p><strong>Single Inheritance Example</strong></p>
+          <pre>
+            <code>
+              #include &lt;iostream&gt;
+              using namespace std;
+
+              class ParentClass
+              {
+
+              public:
+                  string name;
+                  int age;
+
+                  ParentClass(){
+
+                  }
+
+                  ParentClass(string name, int age)
+                  {
+                      this->name = name;
+                      this->age = age;
+                  }
+
+                  void showInfo()
+                  {
+                      cout &lt;&lt; "Name is :" &lt;&lt; this->name &lt;&lt; endl;
+                      cout &lt;&lt; "age is :" &lt;&lt; this->age &lt;&lt; endl;
+                  }
+              };
+
+              class ChildClass : public ParentClass
+              {
+
+              public:
+                  ChildClass(string name, int age)
+                  {
+                      this->name = name;
+                      this->age = age;
+                  }
+              };
+
+              int main()
+              {
+                  ParentClass p1("Chetan", 28);
+                  ChildClass c1("Shivashi", 1);
+
+                  c1.showInfo();
+                  p1.showInfo();
+                  return 0;
+              }
+            </code>
+          </pre>
+          <p><strong>multi level Inheritance Example</strong></p>
+          <pre>
+            <code>
+              #include <iostream>
+              using namespace std;
+
+              class Teacher
+              {
+                  int id;
+
+              public:
+                  string name;
+                  int age;
+                  string subject;
+                  float salary;
+                  
+                  Teacher() {};
+
+                  Teacher(string name, int id, int age, string subject, float salary)
+                  {
+                      this->name = name;
+                      this->id = id;
+                      this->age = age;
+                      this->subject = subject;
+                      this->salary = salary;
+                  }
+
+                  void showInfo()
+                  {
+                      cout &lt;&lt; "Name of the Teacher is : " &lt;&lt; this->name &lt;&lt; endl;
+                      cout &lt;&lt; "Id of the Teacher is : " &lt;&lt; this->id &lt;&lt; endl;
+                      cout &lt;&lt; "Age of the Teacher is : " &lt;&lt; this->age &lt;&lt; endl;
+                      cout &lt;&lt; "Subject of the Teacher is : " &lt;&lt; this->subject &lt;&lt; endl;
+                      cout &lt;&lt; "Salary of the Teacher is : " &lt;&lt; this->salary &lt;&lt; endl;
+                  }
+              };
+
+              class Student
+              {
+                  int id;
+
+              public:
+                  string name;
+                  int age;
+                  int rollNo;
+                  float Percentage;
+                  Student() {};
+                  Student(string name, int id, int age, int rollNO, float Percentage)
+                  {
+                      this->name = name;
+                      this->id = id;
+                      this->age = age;
+                      this->rollNo = rollNO;
+                      this->Percentage = Percentage;
+                  }
+
+                  void showInfo()
+                  {
+                      cout &lt;&lt; "Name of the Student is : " &lt;&lt; this->name &lt;&lt; endl;
+                      cout &lt;&lt; "Id of the Student is : " &lt;&lt; this->id &lt;&lt; endl;
+                      cout &lt;&lt; "Age of the Student is : " &lt;&lt; this->age &lt;&lt; endl;
+                      cout &lt;&lt; "Roll No of the Student is : " &lt;&lt; this->rollNo &lt;&lt; endl;
+                      cout &lt;&lt; "Percentage of the Student is : " &lt;&lt; this->Percentage &lt;&lt; endl;
+                  }
+              };
+
+              class TA : public Student, public Teacher
+              {
+                  int id;
+
+              public:
+                  TA(string name, int id, int age, int rollNO, float Percentage, string subject, float salary)
+                  {
+                      Student::name = name;
+                      this->id = id;
+                      Student::age = age;
+                      this->rollNo = rollNO;
+                      this->Percentage = Percentage;
+                      this->subject = subject;
+                      this->salary = salary;
+                  }
+                  void showInfo()
+                  {
+                      cout &lt;&lt; "Name of the Student is : " &lt;&lt; Student::name &lt;&lt; endl;
+                      cout &lt;&lt; "Id of the Student is : " &lt;&lt; this->id &lt;&lt; endl;
+                      cout &lt;&lt; "Age of the Student is : " &lt;&lt; Student::age &lt;&lt; endl;
+                      cout &lt;&lt; "Roll No of the Student is : " &lt;&lt; Student::rollNo &lt;&lt; endl;
+                      cout &lt;&lt; "Percentage of the Student is : " &lt;&lt; Student::Percentage &lt;&lt; endl;
+                      cout &lt;&lt; "Subject of the Teacher is : " &lt;&lt; Teacher::subject &lt;&lt; endl;
+                      cout &lt;&lt; "Salary of the Teacher is : " &lt;&lt; Teacher::salary &lt;&lt; endl;
+                  }
+              };
+              int main()
+              {
+                  TA ta1("Chetan",121,24,1,83.33,"c++",14000);
+                  ta1.showInfo();
+                  return 0;
+              }
+            </code>
+          </pre>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

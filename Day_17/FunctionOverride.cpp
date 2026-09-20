@@ -3,7 +3,7 @@ using namespace std;
 
 class Parent {
 
-public:
+public: 
     void show(){
         cout << "Parent class" << endl;
     }
