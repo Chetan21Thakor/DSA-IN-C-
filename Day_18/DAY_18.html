@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 18 : Chapter : Class and Object Part-2</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Class and Object Part-2</h1>
+      </header>
+      <article>
+        <div class="content">
+          <header>
+            <h3>Polymorphism</h3>
+          </header>
+          <p>
+            <strong
+              ><q>What is Polymorphism Why We Need Polymorphism?</q></strong
+            >
+          </p>
+          <p>
+            A Polymorphism is ability of the Object to take a more then one form
+            or behave in different way based on it's context pass. <br />
+            <br />
+            In simple Meaning of the Polymorphism is same name but different
+            task based on arguments or parameter. form. <br />
+            <strong>Poly</strong> Means : Multiple. <strong>Mor</strong> Means :
+            Form.
+          </p>
+          <p><strong>There are Two Type of the Polymorphism</strong></p>
+          <ol>
+            <li>Compile Time Polymorphism</li>
+            <li>Run Time Polymorphism</li>
+          </ol>
+          <p><strong>1. Compile Time Polymorphism</strong></p>
+          <p>
+            IN Compile Time Polymorphism Compiler Know automatically at compile
+            time which function or which Operator it's have to call based on
+            it's pass arguments.
+          </p>
+          <p><strong>Example of Compile Time Polymorphism</strong></p>
+          <ol>
+            <li>Function OverLoading</li>
+            :A Function with a same name but different - different form and it'a
+            automatically called based on it's passed arguments it's called
+            "Function OverLoading".
+            <br />
+            <br />
+            <li>Operator OverLoading</li>
+            :A same Operator but with different - different definition or
+            different form and behave in different manner based on it's Operand
+            passed it's called "Operator OverLoading".
+          </ol>
+          <p><strong>Function OverLoading in Code</strong></p>
+          <pre>
+            <code>
+                #include &lt;iostream&gt;
+                using namespace std;
+
+                class Addition {
+
+                public:
+                    //Function OverLoading
+                    int add(int a,int b){
+                        return a+b;
+                    }
+
+                    int add(int a,int b,int c){
+                        return a+b+c;
+                    }
+
+                    int add(int a,int b,int c,int d){
+                        return a+b+c+d;
+                    }
+
+                    int add(int a,int b,int c , int d , int e){
+                        return a+b+c+d+e;
+                    }
+
+                    double add(int a,double b){
+                        return a+b;
+                    }
+
+                    float add(float a,double b,int c){
+                        return a+b+c;
+                    }
+
+                    
+                };
+
+                int main()
+                {
+                    Addition a;
+
+                    cout &lt;&lt; "Sum is : " &lt;&lt; a.add(1,2)&lt;&lt; endl;
+                    cout &lt;&lt; "Sum is : " &lt;&lt; a.add(1,2,3)&lt;&lt; endl;
+                    cout &lt;&lt; "Sum is : " &lt;&lt; a.add(1,2,3,4)&lt;&lt; endl;
+                    cout &lt;&lt; "Sum is : " &lt;&lt; a.add(1,2,3,4,5)&lt;&lt; endl;
+                    cout &lt;&lt; "Sum is : " &lt;&lt; a.add(1,2.9)&lt;&lt; endl;
+                    cout &lt;&lt; "Sum is : " &lt;&lt; a.add(1.5,2.9,10)&lt;&lt; endl;
+                    return 0;
+                }
+            </code>
+          </pre>
+          <p><strong>Operator OverLoading in code</strong></p>
+          <pre>
+            <code>
+                #include &lt;iostream&gt;
+                using namespace std;
+
+                class ComplexNumber
+                {
+                    int real;
+                    int img;
+
+                public:
+                    ComplexNumber()
+                    {
+                    }
+                    ComplexNumber(int real, int img)
+                    {
+                        this->real = real;
+                        this->img = img;
+                    }
+
+                    ComplexNumber operator+(ComplexNumber &c2)
+                    {
+                        ComplexNumber c3;
+                        c3.real = this->real + c2.real;
+                        c3.img = this->img + c2.img;
+
+                        return c3;
+                    }
+
+                    ComplexNumber operator-(ComplexNumber &c2)
+                    {
+                        ComplexNumber c3;
+                        c3.real = this->real - c2.real;
+                        c3.img = this->img - c2.img;
+
+                        return c3;
+                    }
+
+                    void showComplexNum()
+                    {
+                        cout &lt;&lt; "Complex Number is : " &lt;&lt; this->real &lt;&lt; " + " &lt;&lt; this->img &lt;&lt; "i ." &lt;&lt; endl;
+                    }
+                };
+
+                int main()
+                {
+
+                    ComplexNumber c1(2, 7);
+                    c1.showComplexNum();
+                    ComplexNumber c2(1, 4);
+                    c2.showComplexNum();
+                    ComplexNumber c3 = c1 - c2;
+                    
+                    c3.showComplexNum();
+                    return 0;
+                }
+            </code>
+          </pre>
+          <p><strong>Run Time Polymorphism</strong></p>
+          <p>
+            A Compiler Don't at compile time which Function it's have to call
+            it's decide a which function it's have to call at time of execution
+            it's called "Run Time Polymorphism".
+          </p>
+          <p>
+            <strong
+              >Function Overriding is Example of the Run Time
+              Polymorphism.</strong
+            >
+          </p>
+          <p>
+            <strong><q>What is Function Overriding ?</q></strong>
+          </p>
+          <p>
+            A One class inherit a properties and method of the another class
+            that time a function which already define inside a parent class but
+            it's redefine inside a child class which over power parent class
+            function means if child class call that function that time a
+            function which is redefine inside a child it'a called it's called
+            "Function Overriding".
+          </p>
+          <p>It's Done in Inheritance Only.</p>
+          <p>
+            Compiler Don't at compile time which function it's have to call. A
+            function which id define inside a parent class or A function which
+            is redefine inside a child class.
+            <br />
+            <br />
+            Then it's decide at execution time of the program to it's have to
+            call . A function which is define inside a child class.
+          </p>
+          <p>It's Done using two way</p>
+          <ol>
+            <li>Normal redefining Function in child class.</li>
+            <li>Virtual function redefining in child class.</li>
+          </ol>
+          <p>
+            <strong>Normal redefining Function in child class in code.</strong>
+          </p>
+
+          <pre>
+            <code>
+                #include &lt;iostream&gt;
+                using namespace std;
+
+                class Parent {
+
+                public: 
+                    void show(){
+                        cout &lt;&lt; "Parent class" &lt;&lt; endl;
+                    }
+                };
+
+                class Child : public Parent {
+
+                public:
+                    void show(){
+                        cout &lt;&lt; "Child class" &lt;&lt; endl;
+                    }
+                };
+
+                int main()
+                {
+                    // Parent p1;
+                    // p1.show();
+                    // Child child1;
+                    // child1.show();
+
+                    Parent p1;
+                    p1.show();
+                    Child child1;
+                    child1.show();
+
+                    Parent *ptr = &child1;
+                    ptr->show();
+                    
+                    return 0;
+                }
+            </code>
+          </pre>
+          <p>
+            It's has One issue when you store a memory address of the child
+            class in parent class object that time when you call a override
+            function using that pointer then it's called parent class function
+            actually it'a have to call child function.
+          </p>
+          <p>
+            Storing memory address of child into parent class Pointer it's only
+            done Inheritance. <br />
+            <br />
+            only parent class pointer can store a child class memory vice verse
+            not possible.
+          </p>
+          <p>This Issue resolve by Virtual Function.</p>
+          <p><strong>Virtual function redefining in child class.</strong></p>
+          <pre>
+            <code>
+                #include &lt;iostream&gt;
+                using namespace std;
+
+                class Parent
+                {
+
+                public:
+                    virtual void show()
+                    {
+                        cout &lt;&lt; "Parent class" &lt;&lt; endl;
+                    }
+                };
+
+                class Child : public Parent
+                {
+
+                public:
+                    void show()
+                    {
+                        cout &lt;&lt; "Child class" &lt;&lt; endl;
+                    }
+                };
+
+                int main()
+                {
+                    Parent p1;
+                    p1.show();
+                    Child child1;
+                    child1.show();
+
+                    Parent *ptr = &child1;
+                    ptr->show();
+                    
+                    return 0;
+                }
+            </code>
+          </pre>
+          <p>Above issue resolve by Virtual Function.</p>
+          <p>
+            <strong>Virtual Function</strong> : A we very well know it's
+            redefine inside a Child class that function we make as Virtual
+            Function. <br />
+            <br />
+            A function always redefine inside a Child class it'a called "Virtual
+            Function".
+            <br />
+            It's define inside a parent class using virtual keyword.
+          </p>
+          <pre>
+            <code>
+                #include &lt;iostream&gt;
+                using namespace std;
+
+                class Parent
+                {
+
+                public:
+                    virtual void show()
+                    {
+                        cout &lt;&lt; "Parent class" &lt;&lt; endl;
+                    }
+                };
+
+                class Child : public Parent
+                {
+
+                public:
+                    void show()
+                    {
+                        cout &lt;&lt; "Child class" &lt;&lt; endl;
+                    }
+                };
+
+                int main()
+                {
+                    Parent p1;
+                    p1.show();
+                    Child child1;
+                    child1.show();
+
+                    Parent *ptr = &child1;
+                    ptr->show();
+                    
+                    return 0;
+                }
+            </code>
+          </pre>
+        </div>
+      </article>
+      <article>
+        <div class="content">
+          <header>
+            <h4>Abstraction In Class</h4>
+          </header>
+          <p>
+            <strong><q>What is Abstraction and Why we Need it?</q></strong>
+          </p>
+          <p>
+            <dfn
+              >A Abstraction is Hiding all the unnecessary Details and just
+              showing important data it's called "Abstraction"</dfn
+            >
+            <br />
+            <br />
+            in class we are declare a some properties as Private to Hiding data
+            and some properties and method makes to show important data it's is
+            example of the "Abstraction". <br />
+            <br />
+            Abstraction Mean Unclear definition of the thing or object which
+            can't be define.
+          </p>
+          <p>
+            <strong
+              ><q
+                >What is Abstraction class and Abstraction Function?</q
+              ></strong
+            >
+          </p>
+          <p>
+            <strong>Abstraction function : </strong> A virtual Function which
+            logic define as 0 (zero) or a virtual function which unimplemented
+            it's called "Pure Virtual Function" or "Abstraction function".
+            <br />
+            <br />
+            Abstraction function mean :" A function which definition is Unclear
+            to which constantly changed."
+            <br />
+            Abstraction function are always define inside child class.
+
+            <strong>Abstraction Class : </strong> A class which contain one or
+            more then one Pure Virtual Function it's called "Abstraction class".
+            <br />
+            <br />
+            Abstraction class mean :" A class which definition is Unclear."
+            <br />
+            we can not create a object of the Abstraction Class.
+            <br />
+            Abstraction Class is only used to Inheritance.
+            <br />
+            Abstraction Class define how it's child looks how there behave.
+          </p>
+          <p><strong>Abstraction class and Function in code</strong></p>
+          <pre>
+            <code>
+              #include &lt;iostream&gt;
+              using namespace std;
+
+                class Shape
+              {
+                  public:
+                      virtual void draw() = 0;
+              };
+              class Circle : public Shape {
+
+                  public:
+                      void draw(){
+                          cout &lt;&lt; "Circle Draw...." &lt;&lt; endl;
+                      }
+              };
+              class Square : public Shape {
+
+                  public:
+                      void draw(){
+                          cout &lt;&lt; "Square Draw...." &lt;&lt; endl;
+                      }
+              };
+
+              int main()
+              {
+                  Square s;
+                  s.draw();
+                  Circle c;
+                  c.draw();
+                  return 0;
+              }
+            </code>
+          </pre>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

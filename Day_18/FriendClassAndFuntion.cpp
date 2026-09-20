@@ -16,17 +16,17 @@ class B
     {
         cout << "Secret of class is Privet data we can access " << a.secret << endl;
     }
+    void revelSecret(A &a)
+        {
+            cout << "Secret of class is Privet data we can access " << a.secret << endl;
+        }
 };
 
-void revelSecret(A &a)
-    {
-        cout << "Secret of class is Privet data we can access " << a.secret << endl;
-    }
 int main()
 {
     A a;
     B b1;
     b1.showSecret(a);
-    revelSecret(a);
+    b1.revelSecret(a);
     return 0;
 }

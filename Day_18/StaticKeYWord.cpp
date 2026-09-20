@@ -36,6 +36,6 @@ int main()
     cout << "Counter value is :" << c3.x++ << endl;
     cout << "Counter value is :" << c4.x++ << endl;
     cout << "Counter value is :" << c5.x++ << endl;
-    cout << "Counter value is :" << c5.x<< endl;
+    cout << "Counter value is :" << c5.x << endl;
     return 0;
 }
